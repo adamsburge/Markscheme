@@ -7,16 +7,58 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Garamond';
+    font-family: 'Noto Serif Georgian';
+}
+
+.font-playfair {
+    font-family: 'Playfair Display';
+}
+
+.font-lato {
+    font-family: 'lato';
+}
+
+.font-georgia {
+    font-family: 'Noto Serif Georgian';
 }
 
 header {
-    z-index: 999;
+    background-color: transparent;
+    
+}
+
+.thin {
+    font-weight: 300;
 }
 
 #home-content-container {
-    background-color: #e7d4bc;
-    height: 1000px;
+    background-color: #ede5db;
+    height: calc(100vh - 130px);
+    margin-bottom: 0 !important;
+}
+
+#home-title {
+    z-index: 999;
+    padding-top: 280px;
+}
+
+#home-image {
+    background: url('/media/glasses.jpg') no-repeat right local;
+    background-size: contain;
+    margin-top: 80px;
+    height: 500px;
+}
+
+
+#tiles-div {
+    margin-top: 50px;
+    height: 30vh;
+}
+
+.home-tiles {
+    background-color: #A6635D;
+    height: 200px;
+    border: white solid 1px;
 }
 
 /* Taken from the Boutique Ado Project which sourced this code from Bulma */
@@ -28,8 +70,13 @@ header {
     width: 1.5rem;
 }
 
+#search-button {
+    border-left: unset !important;
+}
+
 .logo-font {
     text-transform: uppercase;
+    font-family: 'Playfair Display';
 }
 
 .main-logo-link {
@@ -53,6 +100,10 @@ header {
 
 .text-black {
     color: #253759 !important;
+}
+
+.text-big {
+    font-size: 1.3em;
 }
 
 .border-black {
@@ -81,15 +132,50 @@ header {
     .header-container {
         padding-top: 129px;
     }
+
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    header {
+        max-width: 100vw;
+        padding: 30px;
+    }
+
+    .header-container {
+        padding-top: 129px;
+    }
+    
+    #home-image {
+        background-size: 900px;
+        height: 900px;
+        margin: unset;
+        position: unset;
+    }
+
+  }
 
 /* home page content for smaller devices */
 @media (max-width: 767px) {
     .header-container {
-        padding-top: 65px;
+        margin-top: 0px;
+        
     }
 
     body {
-        font-size: .7rem;
+        font-size: .5em;
+    }
+
+    header {
+        max-width: 100vw;
+    }
+    
+    #home-title {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    #home-content-container {
+        height: 100vh;
     }
 }
