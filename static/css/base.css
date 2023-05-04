@@ -3,11 +3,16 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+    background-color: #ede5db !important;
     color: #555;
     font-family: 'Noto Serif Georgian';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 .font-playfair {
@@ -27,39 +32,52 @@ header {
     
 }
 
+footer {
+    height: 150px;
+}
+
+.bg-brown {
+    background-color: #736151 !important;
+}
+
+.bg-pink {
+    background-color: #A6635D !important;
+}
+
 .thin {
     font-weight: 300;
 }
 
 #home-content-container {
     background-color: #ede5db;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 130px - 150px);
     margin-bottom: 0 !important;
 }
 
 #home-title {
-    z-index: 999;
-    padding-top: 280px;
+    z-index: 999 !important;
+    padding-top: 270px;
+    position: inherit;
 }
 
 #home-image {
     background: url('/media/glasses.jpg') no-repeat right local;
     background-size: contain;
-    margin-top: 80px;
-    height: 500px;
+    height: 380px;
+    z-index: 980;
 }
 
 
 #tiles-div {
-    margin-top: 50px;
-    height: 30vh;
+    margin-top: 70px;
 }
 
 .home-tiles {
-    background-color: #A6635D;
-    height: 200px;
+    background-color: #736151;
+    height: 170px;
     border: white solid 1px;
 }
+
 
 /* Taken from the Boutique Ado Project which sourced this code from Bulma */
 .icon {
@@ -94,7 +112,7 @@ header {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #D9C4B8;
+    background: #343a40;
     color: white;
 }
 
@@ -136,7 +154,10 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+    #home-content-container {
+        height: unset;
+    }
+
     header {
         max-width: 100vw;
         padding: 30px;
@@ -145,12 +166,25 @@ header {
     .header-container {
         padding-top: 129px;
     }
+
+    #home-title {
+        font-size: 2.5rem;
+        margin-top: 0;
+        text-align: center !important;
+        padding-top: 94px;
+        padding-bottom: 50px;
+    }
     
     #home-image {
-        background-size: 900px;
-        height: 900px;
+        background: url('/media/glasses.jpg') no-repeat center local;
+        background-size: contain;
+        height: 580px;
         margin: unset;
         position: unset;
+    }
+
+    footer {
+        padding: unset;
     }
 
   }
@@ -173,9 +207,27 @@ header {
     #home-title {
         font-size: 1.5rem;
         margin-top: 0;
+        text-align: center !important;
+        padding-top: 94px;
+        padding-bottom: 30px;
     }
 
     #home-content-container {
-        height: 100vh;
+        height: unset;
+    }
+
+    .home-content-buttons{
+        padding-bottom: 40px;
+    }
+
+    footer {
+        height: unset;
+    }
+
+    #home-image {
+        background: url('/media/glasses.jpg') no-repeat center local;
+        background-size: contain;
+        height: 160px;
+        margin-bottom: 100px;
     }
 }

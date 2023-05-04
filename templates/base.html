@@ -118,6 +118,28 @@
     {% block content %}
     {% endblock %}
 
+    <!-- This footer came from my recent project, Archaevit, and is used here with a few modifications -->
+    <footer class="footer mt-auto bg-dark"> 
+        <div class="row col-12 mt-3 p-3">
+            <div class="col-8 col-md-4">
+                <h4 class="text-white font-display thin logo-font">Markscheme</h4>
+                <p class="text-white font-georgian">Helping Students Achieve their Dreams</p>
+            </div>
+            <div class="col-8 col-md-4">
+                <h4 class="text-white font-display thin logo-font">Overview</h4>
+                <a href="{% url 'account_signup' %}" class="footer-link text-white">Register</a><br>
+                <a href="{% url 'account_login' %}" class="footer-link text-white">Sign In</a>
+            </div>
+            <div class="col-8 col-md-4">
+                <h4 class="text-white font-display thin logo-font">Socials </h4>
+                <i class="socials fab fa-facebook-square pe-3 text-white"></i>
+                <i class="socials fab fa-twitter-square pe-3 text-white"></i>
+                <i class="socials fab fa-instagram-square pe-3 text-white"></i>
+                <i class="socials fab fa-youtube-square pe-3 text-white"></i>
+            </div>
+        </div>
+    </footer>
+
     {% block postloadjs %}
     {% endblock %}
 
