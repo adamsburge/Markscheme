@@ -79,6 +79,18 @@ footer {
 }
 
 
+/* About us Page - CSS here taken from my former project: Ancient Languages Society */
+
+
+/* About Us Section: Create Image and Image Circle Border */
+
+#about-image {
+    background: url('/media/team2.jpg') no-repeat center local;
+    background-size: contain;
+    height: 380px;
+    z-index: 980;
+}
+
 /* Taken from the Boutique Ado Project which sourced this code from Bulma */
 .icon {
     align-items: center;
