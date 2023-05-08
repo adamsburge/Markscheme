@@ -10,35 +10,66 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="container-fluid pb-5">
         <div class="row">
-            <div class="col">
-                {% for workshop in workshops %}
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Workshops</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for workshop in workshops %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if workshop.image %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ workshop.image.url }}" alt="{{ workshop.name }}">
+                                    <img class="card-img-top img-fluid card-img" object-fit="cover" src="{{ workshop.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="/media/no_image.jpg" alt="{{ workshop.name }}">
+                                    <img class="card-img-top img-fluid card-img" object-fit="cover" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ workshop.name }}</p>
+                                    <p class="mb-0 font-weight-bold pb-2 font-playfair">{{ workshop.name }}</p>
+                                    <p class="mb-0 pb-2 card-smaller-text font-georgia">{{ workshop.description|truncatewords:9 }}</p>
+                                    <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Date:</span> {{ workshop.date }} at {{ workshop.time }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">£ {{ workshop.price }}</p>
+                                            <p class="mb-0 text-left card-smaller-text"><span class="font-weight-bold">Price:</span> £{{ workshop.price }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
                     {% endfor %}
+                </div>
             </div>
         </div>
     </div>

@@ -146,8 +146,16 @@ footer {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
 	z-index: -1;
+}
+
+.card-img {
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.card-smaller-text {
+    font-size: .8rem;
 }
 
 /* -------------------------------- Media Queries */

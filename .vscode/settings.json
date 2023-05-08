@@ -24,5 +24,8 @@
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
-   "files.autoSaveDelay": 1000
+   "files.autoSaveDelay": 1000,
+   "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   }
 }
