@@ -85,7 +85,7 @@ footer {
 /* About Us Section: Create Image and Image Circle Border */
 
 #about-image {
-    background: url('/media/team2.jpg') no-repeat center local;
+    background: url('/media/team.jpg') no-repeat center local;
     background-size: contain;
     height: 380px;
     z-index: 980;
