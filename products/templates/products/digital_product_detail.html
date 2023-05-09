@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if digital_product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid detail-page-img" src="{{ digital_product.image.url }}" alt="{{ digital_product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid detail-page-img" src="/media/no_image.jpg" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <h3 class="mb-0 font-playfair thin">{{ digital_product.name }}</h3>
+                    <p class="lead mb-0 mt-3 font-weight-bold">£{{ digital_product.price }}</p>
+                    <br>
+                    <p class="font-georgia font-weight-bold text-uppercase mt-4 mb-2">Details:</p>
+                    <hr class="m-0">
+                    <p class="font-georgia mt-1 mb-0">
+                        {% if digital_product.host_creators.count < 2 %}
+                        <span class="font-weight-bold">Author:</span>
+                        {% else %}
+                        <span class="font-weight-bold">Authors:</span>
+                        {% endif %}
+                            {% for instructor in digital_product.host_creators.all %}
+                                <span>{{ instructor.first_name }} {{ instructor.last_name }}{% if forloop.counter < digital_product.host_creators.count|add:"-1"  %},
+                                {% elif forloop.counter == digital_product.host_creators.count|add:"-1" %}
+                                and
+                                {% endif %}
+                            {% endfor %}
+                                </span>
+                    </p>
+                    <p class="font-georgia mt-1 mb-0"><span class="font-weight-bold">Format:</span> PDF Booklet</p>
+                    <p class="font-georgia mt-1 mb-0"><span class="font-weight-bold">Pages:</span> {{ digital_product.pages }}</p>
+                    <p class="font-georgia font-weight-bold mt-5 mb-2 text-uppercase">Description:</p>
+                    <hr class="m-0">
+                    <p class="font-georgia">{{ digital_product.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

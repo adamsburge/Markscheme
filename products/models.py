@@ -42,6 +42,7 @@ class Workshop(Product):
     attendance = models.ManyToManyField(User, related_name='workshop_attendees', blank=True)
 
 
-class StudentResource(Product):
+class DigitalProduct(Product):
     file = models.FileField(upload_to='media/student_resources/')
+    pages = models.IntegerField()
     owners = models.ManyToManyField(User, related_name='resource_owners', blank=True)

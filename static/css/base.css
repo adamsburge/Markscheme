@@ -158,6 +158,12 @@ footer {
     font-size: .8rem;
 }
 
+.detail-page-img {
+    max-height: 60vh;
+    object-fit: cover;
+    object-position: center center;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -223,6 +229,7 @@ footer {
 @media (max-width: 767px) {
     .header-container {
         margin-top: 0px;
+        padding-top: 116px;
         
     }
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from polymorphic.admin import PolymorphicParentModelAdmin, PolymorphicChildModelAdmin, PolymorphicChildModelFilter
-from .models import Category, Product, Workshop, StudentResource
+from .models import Category, Product, Workshop, DigitalProduct
 
 
 class ModelAChildAdmin(PolymorphicChildModelAdmin):
@@ -14,16 +14,16 @@ class ProductAdmin(ModelAChildAdmin):
     show_in_index = True  # makes child model admin visible in main admin site
 
 
-@admin.register(StudentResource)
+@admin.register(DigitalProduct)
 class ProductAdmin(ModelAChildAdmin):
-    base_model = StudentResource  # Explicitly set here!
+    base_model = DigitalProduct  # Explicitly set here!
     show_in_index = True  # makes child model admin visible in main admin site
 
 
 @admin.register(Product)
 class ProductAdmin(PolymorphicParentModelAdmin):
     base_model = Product  # Optional, explicitly set here.
-    child_models = (Workshop, StudentResource)
+    child_models = (Workshop, DigitalProduct)
 
 
 class CategoryAdmin(admin.ModelAdmin):

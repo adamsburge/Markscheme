@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if workshop.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid detail-page-img" src="{{ workshop.image.url }}" alt="{{ workshop.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid detail-page-img" src="/media/no_image.jpg" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <h3 class="mb-0 font-playfair thin">{{ workshop.name }}</h3>
+                    <p class="lead mb-0 mt-3 font-weight-bold">£{{ workshop.price }}</p>
+                    <br>
+                    <p class="font-georgia font-weight-bold text-uppercase mt-4 mb-2">Details:</p>
+                    <hr class="m-0">
+                    <p class="font-georgia mt-3 mb-0"><span class="font-weight-bold">Date:</span> {{ workshop.date }} at {{ workshop.time }}</p>
+                    <p class="font-georgia mt-1 mb-0"><span class="font-weight-bold">Location:</span> {{ workshop.location }}</p>
+                    <p class="font-georgia mt-1 mb-0">
+                        {% if workshop.host_creators.count < 2 %}
+                        <span class="font-weight-bold">Instructor:</span>
+                        {% else %}
+                        <span class="font-weight-bold">Instructors:</span>
+                        {% endif %}
+                            {% for instructor in workshop.host_creators.all %}
+                                <span>{{ instructor.first_name }} {{ instructor.last_name }}{% if forloop.counter < workshop.host_creators.count|add:"-1"  %},
+                                {% elif forloop.counter == workshop.host_creators.count|add:"-1" %}
+                                and
+                                {% endif %}
+                            {% endfor %}
+                                </span>
+                    </p>
+                    <p class="font-georgia mt-1 mb-0"><span class="font-weight-bold">Available Places:</span> {{ workshop.available_slots }} out of {{ workshop.total_slots }}</p>
+                    <p class="font-georgia font-weight-bold mt-5 mb-2 text-uppercase">Description:</p>
+                    <hr class="m-0">
+                    <p class="font-georgia">{{ workshop.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
