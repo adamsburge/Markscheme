@@ -53,6 +53,46 @@
                     <p class="font-georgia font-weight-bold mt-5 mb-2 text-uppercase">Description:</p>
                     <hr class="m-0">
                     <p class="font-georgia">{{ workshop.description }}</p>
+                    <form class="form" action="{% url 'add_to_bag' workshop.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="form-group w-50 d-none">
+                                    <div class="input-group">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ workshop.id }}" id="id_qty_{{ workshop.id }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            {% if in_bag %}
+                            <div class="col-12">
+                                <p class="bg-pink text-white rounded p-3">This item is already in your bag. If you wish to reserve a spot for another person, create an account for that person and then purchase spot. </p>
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                            </div>
+                            {% else %}
+                            <div class="col-12">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            </div>
+                            {% endif %}
+                            
+
+                            
+                            
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
