@@ -48,19 +48,20 @@ def workshop_detail(request, slug):
      this project """
 
     workshop = get_object_or_404(Product, slug=slug)
-    # below is an attempt to not allow users to add more than one workshop to the bag
-    # This could be fixed in the future
-    # workshop_id = str(workshop.id)
-    # in_bag = False
-    # bag = list(request.session['bag'])
-    # if workshop_id in bag:
-    #    in_bag = True
+    workshop_id = str(workshop.id)
+    in_bag = False
+    if request.session.get('bag', {}):
+        bag = list(request.session['bag'])
+    else:
+        bag = ''
+    if workshop_id in bag:
+        in_bag = True
 
     context = {
         'workshop': workshop,
-        # 'in_bag': in_bag,
-        # 'bag': bag,
-        # 'workshop_id': workshop_id,
+        'in_bag': in_bag,
+        'bag': bag,
+        'workshop_id': workshop_id,
     }
 
     return render(request, 'products/workshop_detail.html', context)
@@ -86,18 +87,18 @@ def digital_product_detail(request, slug):
      this project """
 
     digital_product = get_object_or_404(Product, slug=slug)
-    # below is an attempt to not allow users to add more than one digital product
-    # to the bag. This could be fixed in the future
-    # product_id = str(digital_product.id)
-    # in_bag = False
-    # if request.session['bag']:
-    #    bag = list(request.session['bag'])
-    # if product_id in bag:
-    #    in_bag = True
+    product_id = str(digital_product.id)
+    in_bag = False
+    if request.session.get('bag', {}):
+        bag = list(request.session['bag'])
+    else:
+        bag = ''
+    if product_id in bag:
+        in_bag = True
 
     context = {
         'digital_product': digital_product,
-        # 'in_bag': in_bag,
+        'in_bag': in_bag,
     }
 
     return render(request, 'products/digital_product_detail.html', context)
