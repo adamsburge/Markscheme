@@ -176,11 +176,25 @@ Code Institute's Boutique Ado project and has been modified here -->
             </div>
         </div>
         <div class="row pt-5">
-			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
-					<span class="text-uppercase">Check out our other study materials and workshops</span>
+			{% if from_profile %}
+            <div class="col-12 col-lg-7 text-right">
+				<a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+					<i class="fas fa-angle-left"></i>
+                    <span class="text-uppercase">My Profile</span>
 				</a>
 			</div>
+            {% else %}
+            <div class="col-12 col-lg-4 text-right">
+				<a href="{% url 'digital_products' %}" class="btn btn-black rounded-0 my-2">
+					<span class="text-uppercase">Check out our other digital products</span>
+				</a>
+			</div>
+            <div class="col-12 col-lg-4 text-right">
+				<a href="{% url 'workshops' %}" class="btn btn-black rounded-0 my-2">
+					<span class="text-uppercase">Check out our other workshops</span>
+				</a>
+			</div>
+            {% endif %}
 		</div>
     </div>
 {% endblock %}
