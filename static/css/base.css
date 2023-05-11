@@ -170,6 +170,10 @@ footer {
     font-size: .8rem;
 }
 
+.larger {
+    font-size: 1rem;
+}
+
 .detail-page-img {
     max-height: 60vh;
     object-fit: cover;
