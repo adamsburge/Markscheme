@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Workshop, DigitalProduct, Product
+from django.contrib import messages
 from django.conf import settings
 from django.db.models import Q
+from .forms import WorkshopForm, DigitalProductForm
 
 
 def all_products(request):
@@ -102,3 +104,43 @@ def digital_product_detail(request, slug):
     }
 
     return render(request, 'products/digital_product_detail.html', context)
+
+
+def add_workshop(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = WorkshopForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_workshop'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = WorkshopForm()
+    template = 'products/add_workshop.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def add_digital_product(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = DigitalProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_digital_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = DigitalProductForm()
+    template = 'products/add_digital_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

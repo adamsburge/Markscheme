@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 from polymorphic.models import PolymorphicModel
+from django.utils.text import slugify
+from django.db.models.signals import pre_save
+
+
+def slug_generator(sender, instance, *args, **kwargs):
+    if instance.slug != slugify(instance.name):
+        instance.slug = slugify(instance.name)
 
 
 class Category(models.Model):
@@ -21,7 +28,7 @@ class Product(PolymorphicModel):
     # Base of product model taken from Code Institute's Boutique Ado project,
     # but adjusted here to fit the needs of this project
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -38,7 +45,6 @@ class Workshop(Product):
     date = models.DateField()
     time = models.TimeField()
     total_slots = models.IntegerField()
-    available_slots = models.IntegerField()
     attendance = models.ManyToManyField(User, related_name='workshop_attendees', blank=True)
 
 
@@ -46,3 +52,10 @@ class DigitalProduct(Product):
     file = models.FileField(upload_to='media/student_resources/')
     pages = models.IntegerField()
     owners = models.ManyToManyField(User, related_name='resource_owners', blank=True)
+
+
+# Autogenerates slugs if the no slug exists or
+# name of page changes
+pre_save.connect(slug_generator, sender=Workshop)
+pre_save.connect(slug_generator, sender=DigitalProduct)
+pre_save.connect(slug_generator, sender=Product)
