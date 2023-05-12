@@ -76,9 +76,6 @@ Users who have signed up for an account have access to their account and can upd
 ![Comments](static/images/comments.png)
 
 
-### Mark a Post as Interesting, Important and/or Underrated
-Users who have an account are able to access the 'like' buttons and indicate a post as being interesting, important and/or underrated.
-
 ![Likes](static/images/likes.png)
 
 ![Mobile likes](static/images/mobile_post_contents.png)
