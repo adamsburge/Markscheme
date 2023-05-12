@@ -26,6 +26,6 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "files.autoSaveDelay": 1000,
    "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "vscode.html-language-features"
    }
 }
