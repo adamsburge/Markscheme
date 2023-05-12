@@ -111,9 +111,9 @@ def add_workshop(request):
     if request.method == 'POST':
         form = WorkshopForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_workshop'))
+            return redirect(reverse('workshop_detail', args=[product.slug]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -131,9 +131,9 @@ def add_digital_product(request):
     if request.method == 'POST':
         form = DigitalProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_digital_product'))
+            return redirect(reverse('digital_product_detail', args=[product.slug]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -144,3 +144,59 @@ def add_digital_product(request):
     }
 
     return render(request, template, context)
+
+
+def edit_workshop(request, slug):
+    """ Edit a workshop in the store """
+    product = get_object_or_404(Product, slug=slug)
+    if request.method == 'POST':
+        form = WorkshopForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('workshop_detail', args=[product.slug]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = WorkshopForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_workshop.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+def edit_digital_product(request, slug):
+    """ Edit a digital product in the store """
+    product = get_object_or_404(Product, slug=slug)
+    if request.method == 'POST':
+        form = DigitalProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('digital_product_detail', args=[product.slug]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = DigitalProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_digital_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+def delete_product(request, slug):
+    """ Delete a product from the store """
+    product = get_object_or_404(Product, slug=slug)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))

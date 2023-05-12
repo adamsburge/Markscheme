@@ -45,6 +45,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                {% if request.user.is_superuser %}
+                                    <small class="text-center text-uppercase font-georgia mb-3">
+                                        <a class="text-blue" href="{% url 'edit_digital_product' digital_product.slug %}">Edit</a> | 
+                                        <a class="text-pink" href="{% url 'delete_product' digital_product.slug %}">Delete</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
