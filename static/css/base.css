@@ -321,7 +321,7 @@ and modified for this project */
         
     }
 
-    body {
+    nav {
         font-size: .5em;
     }
 
@@ -333,7 +333,7 @@ and modified for this project */
         font-size: 1.5rem;
         margin-top: 0;
         text-align: center !important;
-        padding-top: 94px;
+        padding-top: 0px;
         padding-bottom: 30px;
     }
 
@@ -343,6 +343,10 @@ and modified for this project */
 
     .home-content-buttons{
         padding-bottom: 40px;
+    }
+
+    #about-header, .about-image {
+        padding-top: 0px;
     }
 
     footer {
