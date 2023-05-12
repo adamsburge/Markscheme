@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Workshop, DigitalProduct, Product
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.db.models import Q
 from .forms import WorkshopForm, DigitalProductForm
@@ -106,8 +107,13 @@ def digital_product_detail(request, slug):
     return render(request, 'products/digital_product_detail.html', context)
 
 
+@login_required
 def add_workshop(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = WorkshopForm(request.POST, request.FILES)
         if form.is_valid():
@@ -126,8 +132,13 @@ def add_workshop(request):
     return render(request, template, context)
 
 
+@login_required
 def add_digital_product(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = DigitalProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -146,8 +157,13 @@ def add_digital_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_workshop(request, slug):
     """ Edit a workshop in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, slug=slug)
     if request.method == 'POST':
         form = WorkshopForm(request.POST, request.FILES, instance=product)
@@ -170,8 +186,13 @@ def edit_workshop(request, slug):
     return render(request, template, context)
 
 
+@login_required
 def edit_digital_product(request, slug):
     """ Edit a digital product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, slug=slug)
     if request.method == 'POST':
         form = DigitalProductForm(request.POST, request.FILES, instance=product)
@@ -194,8 +215,13 @@ def edit_digital_product(request, slug):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, slug):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, slug=slug)
     product.delete()
     messages.success(request, 'Product deleted!')
