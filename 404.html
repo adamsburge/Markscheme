@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<h3>Sorry that page cannot be found</h3>
+
+<div class="col-12 home-content-buttons">
+    <h4 class="text-center">
+        <a class="my-auto btn-black btn shop-now-button rounded-0 py-3" href="{% url 'home' %}">
+            Go back to Home Page
+        </a>
+    </h4>
+</div>
+
+
+{% endblock %}
