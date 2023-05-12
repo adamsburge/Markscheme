@@ -70,7 +70,7 @@ All site visitors can access the home, about, staff pages as well as the checkou
 ## Features Users with Profiles
 
 
-### Update Billing Details
+### Update Billing Details and Purchase History
 Users who have signed up for an account have access to their account and can update their billing details and see their previous orders. Additionally, in their order history, they will find all the information they need for attending workshops (i.e., location, date, time, teachers) as well as the download links for any purchased digital files.
 
 ![Comments](static/images/comments.png)
