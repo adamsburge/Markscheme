@@ -1,10 +1,6 @@
 # Welcome to Markscheme
 
-![Am I Responsive Screenshot](static/images/am_i_responsive.png)
-
-The deployed webapp can be accessed [here](https://archaevit.herokuapp.com/).
-
-Archaevit is designed to be a social media web application for historians, archaeologists and anyone who has an interest in history. Users are able to read articles about archaeological sites, mark the sites as interesting, important, and/or underrated. Additonally, they are able to comment and discuss their opinions about each archaeological site. Admin users are able to add, update and delete posts about archaeological sites.
+Markscheme is an online ecommerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. 
 
 
 # Project Planning 
@@ -16,11 +12,11 @@ I used [balsamiq wireframes](https://balsamiq.com/) to design the UX and UI of t
 
 ![Home Page Wireframe](static/images/Home%20Page.png)
 
-### Archaeological Site Page
+### About Us
 
 ![Post Page Wireframe](static/images/Archaeological%20Site%20Page.png)
 
-### About Page
+### Staff Page
 
 ![About Page Wireframe](static/images/About.png)
 
@@ -35,15 +31,13 @@ I used [balsamiq wireframes](https://balsamiq.com/) to design the UX and UI of t
 ![Log in Page Wireframe](static/images/Log%20in.png)
 
 ### User Stories
-To access and read the user stories for this project, see my Github project [Archaevit User Stories](https://github.com/users/adamsburge/projects/3). Many of these user stories were taken from the Code Institute 'I think therefore I blog' walkthrough project. Two of the user stories are incomplete and are areas where future work could be done on the project.
+To access and read the user stories for this project, see my Github project [Markscheme User Stories](https://github.com/users/adamsburge/projects/4/views/1). Many of these user stories were taken from the Code Institute 'Boutique Ado' walkthrough project. However, some are unique to this project.
 
 ![User Stories](static/images/user_stories.png)
 
 
 ### Databse Structures
-The database models used for this project were based on the models used in Code Institute's 'I think therefore I blog' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project extends Django's default user model and adds extra fields to this model where the Code Institute models kept the default model.
-
-Note: Included here is the database model for the 'updates' comment thread which, as mentioned in the user stories above, outlines areas where this project could develop with future work.
+The database models used for this project were expanded from the models used in Code Institute's 'Boutique Ado' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project uses polymorphism to allow for inherited models which extend the use of the product model thereby allowing for more than one kind of product (i.e., Workshops and Digital Products). Additionally, this project expands the user model beyond that created Code Institute's in the Boutique Ado project.
 
 ![Database Models](static/images/Database%20Models.png)
 
@@ -66,33 +60,19 @@ Any site visitor can register for an account. Once they have done so, they can s
 
 ![Mobile signout](static/images/sign_out_mobile.png)
 
-## Features for Site Visitors, Users with Profiles and Admin Users
+## Features for Site Visitors and Normal Users
 
-### View Home Page
-All site visitors can access the home page, which contains the main post feed.
-
-![Normal Home Page](static/images/non-admin_user_home.png)
-
-
-### Filter Posts by Trending Criteria
-All site visitors can also select any of the three trending criteria ('interesting', 'important' and 'underrated') to view archaeological sites that other users have collectively indicated rank the highest in those categories.
+### Browse the Website, Purchase Products
+All site visitors can access the home, about, staff pages as well as the checkout process. Site visitors have the option to registor for an account when checkout out and consequently keep track of their purchases.
 
 ![Normal Home Page](static/images/non-admin_user_home.png)
 
-### View Posts and Comments
-All site visitors can view the archaeological site pages and the comments other users have left.
-
-![Blog Post](static/images/post_head.png)
-
-![Comments](static/images/comment_logged_out.png)
-
-![Mobile likes](static/images/mobile_post.png)
-
-## Features Users with Profiles and Admin Users
+## Features Users with Profiles
 
 
-### Comment on Posts
-Users who have signed up for an account have access to comments.
+### Update Billing Details
+Users who have signed up for an account have access to their account and can update their billing details and see their previous orders. Additionally, in their order history, they will find all the information they need for attending workshops (i.e., location, date, time, teachers) as well as the download links for any purchased digital files.
+
 ![Comments](static/images/comments.png)
 
 
