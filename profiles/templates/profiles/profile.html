@@ -25,15 +25,57 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Default Delivery Information</p>
+                {% if request.user.is_superuser %}
+                <p class="text-muted text-uppercase">Website Profile Information</p>
+                {% else %}
+                <p class="text-muted text-uppercase">Default Billing Information</p>
+                {% endif %}
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                    <button class="btn btn-black rounded-0 text-uppercase float-right mb-5">Update Information</button>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Order History</p>
+                {% if request.user.is_superuser %}
+                <p class="text-muted text-uppercase pb-3">My Upcoming Classes and Attendance Lists</p>
+                {% for item in workshops_i_teach|dictsort:"date" %}
+                {% if item.attendance.count > 0 %}
+                <button class="accordion rounded mt-2">{{ item }} – {{ item.date }} </button>
+                <div class="panel rounded">
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p class="font-weight-bold">Location</p>
+                    </div>
+                    <div class="col-8">
+                        <p>{{ item.location }}</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p class="font-weight-bold">When</p>
+                    </div>
+                    <div class="col-8">
+                        <p>{{ item.date }} at {{ item.time }}</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p class="font-weight-bold">Attendance List</p>
+                    </div>
+                    <div class="col-8">
+                        {% for student in item.attendance.all %}
+                        <p>
+                        {{ student.first_name }} {{ student.last_name }} <br> 
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                <p class="text-muted text-uppercase">Order History</p>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>
@@ -50,17 +92,15 @@
                                     <td>
                                         <a href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
+                                           <p class="small">{{ order.order_number|truncatechars:10 }}</p>
                                         </a>
                                     </td>
-                                    <td>{{ order.date }}</td>
+                                    <td><p class="small">{{ order.date | date:"M d, Y" }}</p></td>
                                     <td>
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size|upper }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                   – {{ item.product.name }}
                                                 </li>
                                             {% endfor %}
                                         </ul>
@@ -71,8 +111,12 @@
                         </tbody>
                     </table>
                 </div>
+                {% endif %}
+                
             </div>
         </div>
+    </div>
+
 {% endblock %}
 
 {% block postloadjs %}

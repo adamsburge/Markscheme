@@ -142,6 +142,10 @@ footer {
     color: #253759 !important;
 }
 
+.text-blue {
+    color: #4C76A6;
+}
+
 .text-big {
     font-size: 1.3em;
 }
