@@ -252,6 +252,10 @@ and modified for this project */
 	color: #4C76A6; /* text-info */
 }
 
+#mc_embed_signup .foot {
+    display: unset;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
