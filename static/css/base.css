@@ -71,6 +71,12 @@ footer {
     z-index: 980;
 }
 
+#logo-image {
+    background: url('/media/logo-image.png') no-repeat local;
+    background-size: contain;
+    height: 80px;
+    z-index: 980;
+}
 
 #tiles-div {
     margin-top: 70px;
