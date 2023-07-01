@@ -35,6 +35,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['markscheme.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['markscheme.herokuapp.com']
 
 # Application definition
 
