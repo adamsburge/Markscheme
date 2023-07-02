@@ -167,6 +167,8 @@ def checkout_success(request, order_number):
             for item in order.lineitems.all():
                 if item.product.workshop:
                     item.product.workshop.attendance.add(request.user)
+                else:
+                    item.product.DigitalProduct.owners.add(request.user)
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
