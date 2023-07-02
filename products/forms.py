@@ -16,7 +16,7 @@ class WorkshopForm(forms.ModelForm):
     name = forms.CharField(label="Name of Workshop ")
     category = forms.ModelChoiceField(
         queryset=Category.objects.filter(name__startswith='w'),
-        initial=Category.objects.filter(name__startswith='w').id
+        initial=Category.objects.get(name__startswith='w').id
     )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
