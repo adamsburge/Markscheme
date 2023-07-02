@@ -14,9 +14,9 @@ class WorkshopForm(forms.ModelForm):
     time = forms.TimeField(label="Time of Workshop ", widget=TimePickerInput())
     image = forms.ImageField(label="Cover Photo for Workshop Page ")
     name = forms.CharField(label="Name of Workshop ")
-    category = forms.ChoiceField(
-        choices=Category.objects.filter(name__startswith='w'),
-        initial=0
+    category = forms.ModelChoiceField(
+        queryset=Category.objects.filter(name__startswith='w'),
+        initial=Category.objects.filter(name__startswith='w').id
     )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
