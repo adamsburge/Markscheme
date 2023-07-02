@@ -43,6 +43,11 @@ class DigitalProductForm(forms.ModelForm):
     pages = forms.IntegerField(label="Page Count ")
     price = forms.DecimalField(label="Price ")
     file = forms.FileField(label="Upload Digital Product File ")
+    category = forms.ModelChoiceField(
+        queryset=Category.objects.filter(name__startswith='d'),
+        initial=Category.objects.get(name__startswith='d').id,
+        widget=forms.HiddenInput()
+    )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
         widget=forms.CheckboxSelectMultiple,
