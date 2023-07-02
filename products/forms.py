@@ -1,5 +1,5 @@
 from django import forms
-from .models import Workshop, DigitalProduct
+from .models import Workshop, DigitalProduct, Category
 from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput
 from django.contrib.auth.models import User
 
@@ -14,7 +14,9 @@ class WorkshopForm(forms.ModelForm):
     time = forms.TimeField(label="Time of Workshop ", widget=TimePickerInput())
     image = forms.ImageField(label="Cover Photo for Workshop Page ")
     name = forms.CharField(label="Name of Workshop ")
-    category = forms.CharField(initial="workshop")
+    category = forms.ModelChoiceField(
+        queryset=Category.objects.filter(name__startswith='w')
+    )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
         widget=forms.CheckboxSelectMultiple,
