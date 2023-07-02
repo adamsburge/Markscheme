@@ -165,7 +165,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
             for item in order.lineitems.all():
-                if item.product.category == 'workshop':
+                if item.product.category.name == 'workshop':
                     item.product.workshop.attendance.add(request.user)
 
     messages.success(request, f'Order successfully processed! \
