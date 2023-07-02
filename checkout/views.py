@@ -165,10 +165,8 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
             for item in order.lineitems.all():
-                if item.product.workshop:
+                if isinstance(item.product, item.product.workshop):
                     item.product.workshop.attendance.add(request.user)
-                else:
-                    item.product.DigitalProduct.owners.add(request.user)
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
