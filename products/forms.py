@@ -14,6 +14,7 @@ class WorkshopForm(forms.ModelForm):
     time = forms.TimeField(label="Time of Workshop ", widget=TimePickerInput())
     image = forms.ImageField(label="Cover Photo for Workshop Page ")
     name = forms.CharField(label="Name of Workshop ")
+    category = forms.CharField(widget=forms.HiddenInput(), initial="workshop")
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
         widget=forms.CheckboxSelectMultiple,
@@ -22,8 +23,8 @@ class WorkshopForm(forms.ModelForm):
 
     class Meta:
         model = Workshop
-        fields = ('name', 'description', 'host_creators', 'date', 'time',
-                  'location', 'total_slots', 'price', 'image', )
+        fields = ('name', 'description', 'category', 'host_creators', 'date',
+                  'time', 'location', 'total_slots', 'price', 'image', )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
