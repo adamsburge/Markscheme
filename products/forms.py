@@ -15,7 +15,8 @@ class WorkshopForm(forms.ModelForm):
     image = forms.ImageField(label="Cover Photo for Workshop Page ")
     name = forms.CharField(label="Name of Workshop ")
     category = forms.ModelChoiceField(
-        queryset=Category.objects.filter(name__startswith='w')
+        queryset=Category.objects.filter(name__startswith='w'),
+        initial=0
     )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
