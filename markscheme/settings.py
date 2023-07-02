@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['markscheme.herokuapp.com', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['markscheme.herokuapp.com']
 
 # Application definition
-
+ 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -220,6 +220,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 
 
 # Default primary key field type
