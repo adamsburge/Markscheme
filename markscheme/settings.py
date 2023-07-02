@@ -31,14 +31,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['markscheme.herokuapp.com', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['markscheme.herokuapp.com']
 
 # Application definition
- 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
