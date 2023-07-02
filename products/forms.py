@@ -14,7 +14,7 @@ class WorkshopForm(forms.ModelForm):
     time = forms.TimeField(label="Time of Workshop ", widget=TimePickerInput())
     image = forms.ImageField(label="Cover Photo for Workshop Page ")
     name = forms.CharField(label="Name of Workshop ")
-    category = forms.CharField(widget=forms.HiddenInput(), initial="workshop")
+    category = forms.CharField(initial="workshop")
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
         widget=forms.CheckboxSelectMultiple,
