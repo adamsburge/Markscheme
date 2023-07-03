@@ -65,7 +65,7 @@ Code Institute's Boutique Ado project and has been modified here -->
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.product.name }} | {% if item.product.workshop %}Workshop Session{% else %} <a class="text-blue font-italic" href="{{ item.product.file }}" download="">Click here to download your file</a> {% endif %}
+                                {{ item.product.name }} | {% if item.product.workshop %}Workshop Session{% else %} <a class="text-blue font-italic" href="{{ item.product.file }}" download="{{ item.product.file }}">Click here to download your file</a> {% endif %}
                             </p>
                         </div>
                         <div class="col-12 col-md-6 text-md-right">
