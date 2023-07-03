@@ -18,7 +18,10 @@ class WorkshopForm(forms.ModelForm):
     category = forms.ModelChoiceField(
         queryset=Category.objects.filter(name__startswith='w'),
         initial=Category.objects.get(name__startswith='w').id,
-        widget=forms.HiddenInput()
+        # The below hidden input for some reason keeps failing to
+        # actually fill the input when it is hidden. Consequently,
+        # it is disabled for now
+        # widget=forms.HiddenInput()
     )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),

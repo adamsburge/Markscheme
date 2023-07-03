@@ -30,6 +30,8 @@
                     <hr>
                     <p>It's important to explain why you are updating this product </p>
                     {{ update_form | crispy }}
+
+                    {{ product_form.errors }}
                     <div class="text-right mb-4 pt-2">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Update Product</button>

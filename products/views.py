@@ -168,7 +168,7 @@ def edit_workshop(request, slug):
     if request.method == 'POST':
         product_form = WorkshopForm(request.POST, request.FILES, instance=product)
         update_form = ProductNewsUpdateForm(request.POST, request.FILES)
-        if product_form.is_valid() and update_form.is_valid():
+        if product_form.is_valid():
             product_form.save()
             update_form.save()
             if update_form.cleaned_data['major_update']:
