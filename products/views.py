@@ -166,20 +166,26 @@ def edit_workshop(request, slug):
 
     product = get_object_or_404(Product, slug=slug)
     if request.method == 'POST':
-        form = WorkshopForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
+        product_form = WorkshopForm(request.POST, request.FILES, instance=product)
+        update_form = ProductNewsUpdateForm(request.POST, request.FILES)
+        if product_form.is_valid() and update_form.is_valid():
+            product_form.save()
+            update_form.save()
+            if update_form.cleaned_data['major_update']:
+                print('Success! The box was checked!')
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('workshop_detail', args=[product.slug]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
-        form = WorkshopForm(instance=product)
+        product_form = WorkshopForm(instance=product)
+        update_form = ProductNewsUpdateForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_workshop.html'
     context = {
-        'form': form,
+        'product_form': product_form,
+        'update_form': update_form,
         'product': product,
     }
 
