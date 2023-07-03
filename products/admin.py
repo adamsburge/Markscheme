@@ -1,6 +1,6 @@
 from django.contrib import admin
 from polymorphic.admin import PolymorphicParentModelAdmin, PolymorphicChildModelAdmin, PolymorphicChildModelFilter
-from .models import Category, Product, Workshop, DigitalProduct
+from .models import Category, Product, Workshop, DigitalProduct, Updates
 
 
 class ModelAChildAdmin(PolymorphicChildModelAdmin):
@@ -32,4 +32,14 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+class UpdatesAdmin(admin.ModelAdmin):
+    list_display = (
+        'subject',
+        'product',
+        'created_on',
+        'major_update',
+    )
+
+
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Updates, UpdatesAdmin)

@@ -1,5 +1,6 @@
 from django import forms
-from .models import Workshop, DigitalProduct, Category
+from django.shortcuts import get_object_or_404
+from .models import Workshop, DigitalProduct, Category, Updates, Product
 from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput
 from django.contrib.auth.models import User
 
@@ -57,6 +58,22 @@ class DigitalProductForm(forms.ModelForm):
     class Meta:
         model = DigitalProduct
         fields = ('name', 'description', 'pages', 'host_creators', 'price', 'image', 'file', )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class ProductNewsUpdateForm(forms.ModelForm):
+    subject = forms.CharField(label="Subject Line for Update: ")
+    update_description = forms.CharField(widget=forms.Textarea, label="Extended Description for update: ")
+    major_update = forms.CharField(initial=False, required=False, widget=forms.CheckboxInput(), label="Will this update affect those who have purchased this product? <br> <br>Note: if this box is checked, those who have purchased this product will be able to see this update.")
+
+    class Meta:
+        model = Updates
+        fields = ('subject', 'update_description', 'product', 'major_update')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

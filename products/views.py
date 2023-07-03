@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.db.models import Q
-from .forms import WorkshopForm, DigitalProductForm
+from .forms import WorkshopForm, DigitalProductForm, ProductNewsUpdateForm
 
 
 def all_products(request):
@@ -195,20 +195,24 @@ def edit_digital_product(request, slug):
 
     product = get_object_or_404(Product, slug=slug)
     if request.method == 'POST':
-        form = DigitalProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
+        product_form = DigitalProductForm(request.POST, request.FILES, instance=product)
+        update_form = ProductNewsUpdateForm(request.POST, request.FILES)
+        if product_form.is_valid() and update_form.is_valid():
+            product_form.save()
+            update_form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('digital_product_detail', args=[product.slug]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
-        form = DigitalProductForm(instance=product)
+        product_form = DigitalProductForm(instance=product)
+        update_form = ProductNewsUpdateForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_digital_product.html'
     context = {
-        'form': form,
+        'product_form': product_form,
+        'update_form': update_form,
         'product': product,
     }
 

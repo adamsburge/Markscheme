@@ -54,6 +54,20 @@ class DigitalProduct(Product):
     owners = models.ManyToManyField(User, related_name='resource_owners', blank=True)
 
 
+class Updates(models.Model):
+    subject = models.CharField(max_length=200, unique=True)
+    update_description = models.TextField()
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    created_on = models.DateTimeField(auto_now_add=True)
+    major_update = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.subject
+
+
 # Autogenerates slugs if the no slug exists or
 # name of page changes
 pre_save.connect(slug_generator, sender=Workshop)
