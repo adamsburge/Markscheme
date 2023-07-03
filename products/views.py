@@ -200,6 +200,8 @@ def edit_digital_product(request, slug):
         if product_form.is_valid() and update_form.is_valid():
             product_form.save()
             update_form.save()
+            if update_form.cleaned_data['major_update']:
+                print('Success! The box was checked!')
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('digital_product_detail', args=[product.slug]))
         else:
