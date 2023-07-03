@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Workshop, DigitalProduct, Product
+from .models import Workshop, DigitalProduct, Product, Updates
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
@@ -91,6 +91,7 @@ def digital_product_detail(request, slug):
 
     digital_product = get_object_or_404(Product, slug=slug)
     product_id = str(digital_product.id)
+    workshops_i_teach = Updates.objects.all()
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -102,6 +103,7 @@ def digital_product_detail(request, slug):
     context = {
         'digital_product': digital_product,
         'in_bag': in_bag,
+        'workshops_i_teach': workshops_i_teach
     }
 
     return render(request, 'products/digital_product_detail.html', context)

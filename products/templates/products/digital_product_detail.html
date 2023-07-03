@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -52,6 +56,13 @@
                     <p class="font-georgia font-weight-bold mt-5 mb-2 text-uppercase">Description:</p>
                     <hr class="m-0">
                     <p class="font-georgia">{{ digital_product.description }}</p>
+                    
+                    {% for item in workshops_i_teach %}
+                    <button class="accordion rounded mt-2"> {{item.created_on|date}} – {{ item.subject }} </button>
+                    <div class="panel rounded">
+                        <p> {{ item.update_description }} </p>
+                    </div>
+                    {% endfor %}
                     <form class="form" action="{% url 'add_to_bag' digital_product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -92,4 +103,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
