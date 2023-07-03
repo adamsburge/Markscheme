@@ -52,6 +52,7 @@ def workshop_detail(request, slug):
 
     workshop = get_object_or_404(Product, slug=slug)
     workshop_id = str(workshop.id)
+    productupdates = Updates.objects.filter(product=workshop)
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -65,6 +66,7 @@ def workshop_detail(request, slug):
         'in_bag': in_bag,
         'bag': bag,
         'workshop_id': workshop_id,
+        'productupdates': productupdates,
     }
 
     return render(request, 'products/workshop_detail.html', context)
@@ -91,7 +93,7 @@ def digital_product_detail(request, slug):
 
     digital_product = get_object_or_404(Product, slug=slug)
     product_id = str(digital_product.id)
-    workshops_i_teach = Updates.objects.all()
+    productupdates = Updates.objects.filter(product=digital_product)
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -103,7 +105,7 @@ def digital_product_detail(request, slug):
     context = {
         'digital_product': digital_product,
         'in_bag': in_bag,
-        'workshops_i_teach': workshops_i_teach
+        'productupdates': productupdates,
     }
 
     return render(request, 'products/digital_product_detail.html', context)
