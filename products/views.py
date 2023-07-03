@@ -211,7 +211,10 @@ def edit_digital_product(request, slug):
             product_form.save()
             update_form.save()
             if update_form.cleaned_data['major_update']:
-                print('Success! The box was checked!')
+                # A further development could be to add an email
+                # sent to all attendees of the workshop or owners
+                # of the product.
+                print('This is a major update')
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('digital_product_detail', args=[product.slug]))
         else:
