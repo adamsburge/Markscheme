@@ -2,19 +2,53 @@
 
 ![Am-I-Responsive-Image](media/Readme-files/am-i-responsive.png)
 
-Markscheme is an online ecommerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. The store allows the owners to create two types of products: Workshops and Digital Downloads. Interested users can purchase a ticket to a workshop or purchase a digital download to help them improve their knowledge of topics they plan to take exams for.
-
-
-
-# Project Planning 
-## Ideation
-
-NEEDS TO BE FILLED OUT
+Markscheme is an online e-commerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. The store allows the owners to create two types of products: Workshops and Digital Downloads. Interested users can purchase a ticket to a workshop or purchase a digital download to help them improve their knowledge of topics they plan to take exams for.
 
 <br>
 
+# Project Planning 
+
 ## Business Model
-NEEDS TO BE FILLED OUT
+<details>
+<summary>User Goals</summary>
+
+</details>
+
+<details>
+<summary>Site Owner Goals</summary>
+
+</details>
+
+<details>
+<summary>Target Market and Customer Persona</summary>
+
+</details>
+
+<br>
+
+## Marketing
+
+<details>
+<summary>Facebook Marketing</summary>
+
+</details>
+
+<details>
+<summary>Email Marketing</summary>
+
+</details>
+
+<details>
+<summary>SEO</summary>
+
+</details>
+
+<br>
+
+## User Stories
+To access and read the user stories for this project, see my Github project [Markscheme User Stories](https://github.com/users/adamsburge/projects/4/views/1). Many of these user stories were taken from the Code Institute 'Boutique Ado' walkthrough project. However, some are unique to this project.
+
+![User Stories](media/userstories.png)
 
 <br>
 
@@ -88,13 +122,6 @@ Blog Post Page
 
 <br>
 
-## User Stories
-To access and read the user stories for this project, see my Github project [Markscheme User Stories](https://github.com/users/adamsburge/projects/4/views/1). Many of these user stories were taken from the Code Institute 'Boutique Ado' walkthrough project. However, some are unique to this project.
-
-![User Stories](media/userstories.png)
-
-<br>
-
 ## Databse Structures
 The database models used for this project were expanded from the models used in Code Institute's 'Boutique Ado' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project uses polymorphism to allow for inherited models which extend the use of the product model thereby allowing for more than one kind of product (i.e., Workshops and Digital Products). Additionally, this project expands the user model beyond that created Code Institute's in the Boutique Ado project.
 
@@ -137,8 +164,8 @@ However, site users are only able to see product updates which the superusers ha
 ## Features Users with Profiles
 
 <details>
-<summary>Add Item to Bag</summary>
-As this site sells digital files, it is important for customers to have an account. Having an account allows the user to access the any purchased digital products. If the site visitor does not have an account or is not logged in, they will be unable to add a product to their bag and will be prompted to create an account.
+<summary>Add Item to Bag and Checkout</summary>
+As this site sells digital files, it is important for customers to have an account. Having an account allows the user to access the any purchased digital products. If the site visitor does not have an account or is not logged in, they will be unable to add a product to their bag (and consequently to checkout) and will be prompted to create an account.
 </details>
 
 <details>
@@ -192,7 +219,7 @@ On the right side of the superuser's profile page superusers are able to see a l
 
 ### Libraries, Frameworks, Programmes & Tools
 - Github - Version control and storing code 
-- Gitpod - Coding platform
+- VSCode - Coding platform
 - Django - Primary coding framework
 - Psycopg2 - Databse adapter between Postgreql and Python
 - Cloudinary - Media storage
