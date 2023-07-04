@@ -59,7 +59,8 @@ class DigitalProductForm(forms.ModelForm):
 
     class Meta:
         model = DigitalProduct
-        fields = ('name', 'description', 'category', 'pages', 'host_creators', 'price', 'image', 'file', )
+        fields = ('name', 'description', 'category', 'pages',
+                  'host_creators', 'price', 'image', 'file', )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -70,8 +71,17 @@ class DigitalProductForm(forms.ModelForm):
 
 class ProductNewsUpdateForm(forms.ModelForm):
     subject = forms.CharField(label="Subject Line for Update: ")
-    update_description = forms.CharField(widget=forms.Textarea, label="Extended Description for update: ")
-    major_update = forms.CharField(initial=False, required=False, widget=forms.CheckboxInput(), label="Will this update affect those who have purchased this product? <br> <br>Note: if this box is checked, those who have purchased this product will be able to see this update.")
+    update_description = forms.CharField(widget=forms.Textarea,
+                                         label="Extended Description\
+                                              for update: ")
+    major_update = forms.CharField(initial=False, required=False,
+                                   widget=forms.CheckboxInput(),
+                                   label="Will this update affect those who \
+                                    have purchased this product? <br> <br>\
+                                        Note: if this box is checked, those\
+                                              who have purchased this\
+                                                  product will be able\
+                                                      to see this update.")
 
     class Meta:
         model = Updates

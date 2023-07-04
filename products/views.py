@@ -19,10 +19,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     context = {
@@ -55,7 +57,8 @@ def workshop_detail(request, slug):
     workshop = get_object_or_404(Product, slug=slug)
     workshop_id = str(workshop.id)
     productupdates = Updates.objects.filter(product=workshop)
-    user_exists = workshop.attendance.filter(username=request.user.username).exists()
+    user_exists = workshop.attendance.filter(
+        username=request.user.username).exists()
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -98,9 +101,11 @@ def digital_product_detail(request, slug):
     digital_product = get_object_or_404(Product, slug=slug)
     product_id = str(digital_product.id)
     productupdates = Updates.objects.filter(product=digital_product)
-    user_exists = digital_product.owners.filter(username=request.user.username).exists()
+    user_exists = digital_product.owners.filter(
+        username=request.user.username).exists()
     if 'USE_AWS' in os.environ:
-        filelink = 'https://markscheme.s3.amazonaws.com/media/' + str(digital_product.file)
+        filelink = 'https://markscheme.s3.amazonaws.com/media/' + str(
+            digital_product.file)
     else:
         filelink = "http://127.0.0.1:8000/media/" + str(digital_product.file)
     in_bag = False
@@ -136,7 +141,9 @@ def add_workshop(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('workshop_detail', args=[product.slug]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add product. Please\
+                      ensure the form is valid.')
     else:
         form = WorkshopForm()
     template = 'products/add_workshop.html'
@@ -159,9 +166,12 @@ def add_digital_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('digital_product_detail', args=[product.slug]))
+            return redirect(
+                reverse('digital_product_detail', args=[product.slug]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add product. \
+                    Please ensure the form is valid.')
     else:
         form = DigitalProductForm()
     template = 'products/add_digital_product.html'
@@ -181,7 +191,8 @@ def edit_workshop(request, slug):
 
     product = get_object_or_404(Product, slug=slug)
     if request.method == 'POST':
-        product_form = WorkshopForm(request.POST, request.FILES, instance=product)
+        product_form = WorkshopForm(
+            request.POST, request.FILES, instance=product)
         update_form = ProductNewsUpdateForm(request.POST, request.FILES)
         if product_form.is_valid():
             product_form.save()
@@ -191,7 +202,9 @@ def edit_workshop(request, slug):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('workshop_detail', args=[product.slug]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. \
+                    Please ensure the form is valid.')
     else:
         product_form = WorkshopForm(instance=product)
         update_form = ProductNewsUpdateForm(instance=product)
@@ -216,7 +229,8 @@ def edit_digital_product(request, slug):
 
     product = get_object_or_404(Product, slug=slug)
     if request.method == 'POST':
-        product_form = DigitalProductForm(request.POST, request.FILES, instance=product)
+        product_form = DigitalProductForm(
+            request.POST, request.FILES, instance=product)
         update_form = ProductNewsUpdateForm(request.POST, request.FILES)
         if product_form.is_valid() and update_form.is_valid():
             product_form.save()
@@ -227,9 +241,11 @@ def edit_digital_product(request, slug):
                 # of the product.
                 print('This is a major update')
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('digital_product_detail', args=[product.slug]))
+            return redirect(
+                reverse('digital_product_detail', args=[product.slug]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                           Please ensure the form is valid.')
     else:
         product_form = DigitalProductForm(instance=product)
         update_form = ProductNewsUpdateForm(instance=product)
