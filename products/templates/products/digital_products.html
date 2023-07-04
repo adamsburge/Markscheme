@@ -27,11 +27,11 @@
                             <div class="card h-100 border-0">
                                 {% if digital_product.image %}
                                 <a href="{% url 'digital_product_detail' digital_product.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" src="{{ digital_product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" src="{{ digital_product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'digital_product_detail' digital_product.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">

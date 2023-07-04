@@ -28,21 +28,21 @@
                                 {% if product.image %}
                                 {% if product.workshop %}
                                 <a href="{% url 'workshop_detail' product.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'digital_product_detail' product.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 {% else %}
                                 {% if product.workshop %}
                                 <a href="{% url 'workshop_detail' product.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'digital_product_detail' product.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 {% endif %}

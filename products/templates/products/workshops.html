@@ -27,11 +27,11 @@
                             <div class="card h-100 border-0">
                                 {% if workshop.image %}
                                 <a href="{% url 'workshop_detail' workshop.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" src="{{ workshop.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" src="{{ workshop.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'workshop_detail' workshop.slug %}">
-                                    <img class="card-img-top img-fluid card-img" object-fit="cover" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid card-img" height="15px" src="/media/no_image.jpg" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
