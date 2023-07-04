@@ -43,8 +43,9 @@
                         {% else %}
                         <span class="font-weight-bold">Authors:</span>
                         {% endif %}
+                        <span>
                             {% for instructor in digital_product.host_creators.all %}
-                                <span>{{ instructor.first_name }} {{ instructor.last_name }}{% if forloop.counter < digital_product.host_creators.count|add:"-1"  %},
+                                {{ instructor.first_name }} {{ instructor.last_name }}{% if forloop.counter < digital_product.host_creators.count|add:"-1"  %},
                                 {% elif forloop.counter == digital_product.host_creators.count|add:"-1" %}
                                 and
                                 {% endif %}
@@ -140,5 +141,5 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
