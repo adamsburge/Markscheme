@@ -96,6 +96,7 @@ def digital_product_detail(request, slug):
     digital_product = get_object_or_404(Product, slug=slug)
     product_id = str(digital_product.id)
     productupdates = Updates.objects.filter(product=digital_product)
+    user_exists = digital_product.owners.filter(username=request.user.username).exists()
     if 'USE_AWS' in os.environ:
         filelink = 'https://markscheme.s3.amazonaws.com/media/' + str(digital_product.file)
     else:
@@ -113,6 +114,7 @@ def digital_product_detail(request, slug):
         'in_bag': in_bag,
         'productupdates': productupdates,
         'filelink': filelink,
+        'user_exists': user_exists,
     }
 
     return render(request, 'products/digital_product_detail.html', context)

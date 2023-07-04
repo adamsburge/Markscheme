@@ -67,19 +67,45 @@
                                 </div>
                             </div>
                             <br>
-                            
-                            {% if in_bag %}
+                            {% if user_exists %}
                             <div class="col-12">
-                                <p class="bg-pink text-white rounded p-3">This item is already in your bag. You only need to purchase it once and then you have access for life!</p>
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
+                                <div class="bg-pink text-white rounded p-3">
+                                    <p class="text-center text-uppercase">You own this item</p>
+                                    <hr color="white";>
+                                    <p class="font-georgia">Click the link below to download this item. Also, keep an eye on the product updates space below in order to know when newer versions of this product are released!</p>
+
+                                </div>
+                                <div class="mx-auto text-center">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <a href="{{ filelink }}" download="{{ filelink }}" target="_blank" rel="noopener noreferrer" class="btn btn-black rounded-0 text-uppercase mt-5">
+                                        <span class="text-uppercase">Download {{ digital_product.name }} </span>
+                                    </a>
+                                </div>
+                            </div>
+                            {% elif in_bag %}
+                            <div class="col-12">
+                                <div class="bg-pink text-white rounded p-3">
+                                    <p class="text-center text-uppercase">This Item Is Already In Your Bag.</p>
+                                    <hr color="white";>
+                                    <p class="font-georgia">All our digital products come with lifetime access. You only need to purchase it once and then you can download it as many times as you like as well as have access to all updated versions of the product!</p>
+
+                                </div>
+                                <div class="mx-auto text-center">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                </div>
                             </div>
                             {% else %}
-                            <div class="col-12">
+                            <div class="col-12 mx-auto text-center">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -96,10 +122,6 @@
             </div>
         </div>
     </div>
-
-    <a class="text-blue font-italic mx-auto" href="{{ filelink }}" download="{{ filelink }}" target="_blank" rel="noopener noreferrer">Click here to download your file</a>
-
-    <p class="mx-auto mt-3">{{ digital_product.file }} </p>
     {% if productupdates %}
     <div class="col-lg-8 mx-auto mb-5">
         <p class="font-georgia font-weight-bold text-uppercase mt-4 mb-2 text-center">Product Updates: </p>
