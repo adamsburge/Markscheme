@@ -68,7 +68,28 @@
                                 </div>
                             </div>
                             <br>
-                            {% if user_exists %}
+                            {% if not_authenticated %}
+                            <div class="col-12">
+                                <div class="mx-auto text-center">
+                                    <div class="bg-pink text-white rounded">
+                                        <p class="font-georgia p-3">In order to purchase a product, you must be logged in</p>
+                                    </div>
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <a href="{% url 'account_login' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
+                                        <span class="text-uppercase">Log In</span>
+                                    </a>
+                                    <a href="{% url 'account_signup' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
+                                        <span class="text-uppercase">Register for Account</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            {% elif user_exists %}
                             <div class="col-12">
                                 <div class="bg-pink text-white rounded p-3">
                                     <p class="text-center text-uppercase">You own this item</p>

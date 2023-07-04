@@ -59,6 +59,10 @@ def workshop_detail(request, slug):
     productupdates = Updates.objects.filter(product=workshop)
     user_exists = workshop.attendance.filter(
         username=request.user.username).exists()
+    if request.user.is_authenticated:
+        not_authenticated = False
+    else:
+        not_authenticated = True
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -74,6 +78,7 @@ def workshop_detail(request, slug):
         'workshop_id': workshop_id,
         'productupdates': productupdates,
         'user_exists': user_exists,
+        'not_authenticated': not_authenticated,
     }
 
     return render(request, 'products/workshop_detail.html', context)
@@ -108,6 +113,10 @@ def digital_product_detail(request, slug):
             digital_product.file)
     else:
         filelink = "http://127.0.0.1:8000/media/" + str(digital_product.file)
+    if request.user.is_authenticated:
+        not_authenticated = False
+    else:
+        not_authenticated = True
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -122,6 +131,7 @@ def digital_product_detail(request, slug):
         'productupdates': productupdates,
         'filelink': filelink,
         'user_exists': user_exists,
+        'not_authenticated': not_authenticated,
     }
 
     return render(request, 'products/digital_product_detail.html', context)
