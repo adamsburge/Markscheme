@@ -112,10 +112,10 @@ Additionally, the current project has one extra model not depicted in the databa
 
 <br>
 
-## Features for Site Visitors and Normal Users
+## Features for Site Visitors
 
 <details>
-<summary>Sign up, Sign in, Sign Out</summary>
+<summary>Register for Account</summary>
 Any site visitor can register for an account. Once they have done so, they can sign in and out.
 </details>
 
@@ -132,43 +132,54 @@ Any site visitor is able to see updates that have been listed for both workshops
 However, site users are only able to see product updates which the superusers have indicated is a 'Major Update' (which the superuser does by checking a box when updating the product). This allows the superusers to update the products and only show updates to site users that are relevant to the customer. For example, a superuser might choose to indicate that a new release of a handbook is a major update, but indicate that correcting a typo in the description is a minor update and consequently not something the customer needs to be aware of.
 </details>
 
-<details>
-<summary>Limited to One Item Per Product in Bag</summary>
-As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users add an item to their basket, the 'Add to Basket' button disappears and an info box appears informing them that they already have this item in their bag. Users who wish to purchase attendance to workshops for other students are encouraged to create accounts for those students. 
-</details>
-
 <br>
 
 ## Features Users with Profiles
 
-#### Purchase products
+<details>
+<summary>Add Item to Bag</summary>
+As this site sells digital files, it is important for customers to have an account. Having an account allows the user to access the any purchased digital products. If the site visitor does not have an account or is not logged in, they will be unable to add a product to their bag and will be prompted to create an account.
+</details>
 
-NEED TO ADD THIS FEATURE
-
-
-### Update Billing Details and Purchase History
-Users who have signed up for an account have access to their account and can update their billing details and see their previous orders. Additionally, in their order history, they will find all the information they need for attending workshops (i.e., location, date, time, teachers) as well as the download links for any purchased digital files.
-
-![Sign Up Wireframe](media/profile.png)
+<details>
+<summary>Limited to One Item Per Product in Bag</summary>
+As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users add an item to their basket, the 'Add to Basket' button disappears and an info box appears informing them that they already have this item in their bag. Users who wish to purchase attendance to workshops for other students are encouraged to create accounts for those students. 
+</details>
 
 <details>
 <summary>Limited to One Purchase Per Product</summary>
 As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users have purchased a product and return to the product's page (where they can access the download link), the 'Add to Bag' button no longer appears. If the product is a digital product, the 'Add to Bag' button is replaced with the button to download the file.
 </details>
 
+<details>
+<summary>Update Billing Details and View Purchase History</summary>
+Users who have signed up for an account have access to their account and can update their billing details and see their previous orders. Additionally, in their order history, they will find all the information they need for attending workshops (i.e., location, date, time, teachers) as well as the download links for any purchased digital files.
+</details>
+
+
+<br>
+
 ## Features for Admin Only
 
-### View Attendance List
-Super users are able to see a list of classes which they are teaching as well as the attendance lists for those classes
+<details>
+<summary>Add, Edit and Delete Products</summary>
+Site superusers are able to add, edit, and delete both workshops and digital products. 
+<br>
+<br>
+If a site user edits a workshop or digital product, they will also be prompted to add a reason for editing the product. This update form allows the site user to indicate whether the update is major (i.e., is an update the customer should know about such as a new version of a handbook or a change of venue for a workshop) or not (i.e., correcting a typo). If the superuser indicates that the update is major, the update details will be posted at the bottom of the product detail page.
+</details>
 
-![Sign Up Wireframe](media/superprofile.png)
+<details>
+<summary>Edit Personal Profile Information</summary>
+When site superusers visit their profile page, they will find a different view than when a non-superuser visits their profile page. On the left side of the superuser's profile page is a form that allows the superuser to update their profile/bio information that appears on the staff page.
+</details>
 
+<details>
+<summary>View Attendance List</summary>
+On the right side of the superuser's profile page superusers are able to see a list of workshops which they are teaching as well as the attendance lists for those workshops.
+</details>
 
-- Edit Products
-- Edit their profile information
-- Add updates to products
-- 
-
+<br>
 
 # Technologies
 
