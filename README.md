@@ -1,15 +1,107 @@
 # Welcome to Markscheme
 
+![Am-I-Responsive-Image](media/readme-files/am-i-responsive.png)
+
 Markscheme is an online ecommerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. The store allows the owners to create two types of products: Workshops and Digital Downloads. Interested users can purchase a ticket to a workshop or purchase a digital download to help them improve their knowledge of topics they plan to take exams for.
 
-![Home Page Wireframe](media/home.jpeg)
+
 
 # Project Planning 
+## Ideation
+
+NEEDS TO BE FILLED OUT
+
+<br>
+
+## Business Model
+NEEDS TO BE FILLED OUT
+
+<br>
 
 ## Wireframes
-I used [balsamiq wireframes](https://balsamiq.com/) to design the UX and UI of the site. 
+I used [balsamiq wireframes](https://balsamiq.com/) to design the UX and UI of the site. Click the headings below to expand the sections and view the wireframes for each section of the website.
+<br>
+<br>
 
-### Home Page
+<details>
+<summary>Home Page</summary>
+<img src="media/readme-files/wireframe-home-page.png">
+</details>
+
+<details>
+<summary>About Page</summary>
+<img src="media/readme-files/wireframe-about.png">
+</details>
+
+<details>
+<summary>Store Page</summary>
+<img src="media/readme-files/wireframe-store.png">
+</details>
+
+<details>
+<summary>Workshops Page</summary>
+<img src="media/readme-files/wireframe-workshops.png">
+</details>
+
+<details>
+<summary>Digital Product Detail Page</summary>
+<img src="media/readme-files/wireframe-product-detail.png">
+</details>
+
+<details>
+<summary>Workshop Detail Page</summary>
+<img src="media/readme-files/wireframe-workshop-detail.png">
+</details>
+
+<details>
+<summary>Blog and Blog Detail Page</summary>
+<br>
+Note: This section has not yet been added to the app. Future updates will include this feature.
+<br>
+<br>
+Blog Page
+<img src="media/readme-files/wireframe-blog.png">
+<br>
+Blog Post Page
+<img src="media/readme-files/wireframe-blog-post.png">
+</details>
+
+<details>
+<summary>Normal User Profile Page</summary>
+<img src="media/readme-files/wireframe-normal-user-profile.png">
+</details>
+
+<details>
+<summary>Superuser Profile Page</summary>
+<img src="media/readme-files/wireframe-superuser-profile.png">
+</details>
+
+<details>
+<summary>Log In Page</summary>
+<img src="media/readme-files/wireframe-log-in.png">
+</details>
+
+<details>
+<summary>Register for Account Page</summary>
+<img src="media/readme-files/wireframe-register.png">
+</details>
+
+<br>
+
+## User Stories
+To access and read the user stories for this project, see my Github project [Markscheme User Stories](https://github.com/users/adamsburge/projects/4/views/1). Many of these user stories were taken from the Code Institute 'Boutique Ado' walkthrough project. However, some are unique to this project.
+
+![User Stories](media/userstories.png)
+
+<br>
+
+## Databse Structures
+The database models used for this project were expanded from the models used in Code Institute's 'Boutique Ado' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project uses polymorphism to allow for inherited models which extend the use of the product model thereby allowing for more than one kind of product (i.e., Workshops and Digital Products). Additionally, this project expands the user model beyond that created Code Institute's in the Boutique Ado project.
+
+![Sign Up Wireframe](media/databases.png)
+
+# App Overview
+## Home Page
 
 ![Home Page Wireframe](media/home.jpeg)
 
@@ -30,17 +122,6 @@ I used [balsamiq wireframes](https://balsamiq.com/) to design the UX and UI of t
 ### Sign in
 
 ![Sign In Wireframe](media/signin.jpeg)
-
-### User Stories
-To access and read the user stories for this project, see my Github project [Markscheme User Stories](https://github.com/users/adamsburge/projects/4/views/1). Many of these user stories were taken from the Code Institute 'Boutique Ado' walkthrough project. However, some are unique to this project.
-
-![User Stories](media/userstories.png)
-
-
-### Databse Structures
-The database models used for this project were expanded from the models used in Code Institute's 'Boutique Ado' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project uses polymorphism to allow for inherited models which extend the use of the product model thereby allowing for more than one kind of product (i.e., Workshops and Digital Products). Additionally, this project expands the user model beyond that created Code Institute's in the Boutique Ado project.
-
-![Sign Up Wireframe](media/databases.png)
 
 # Features
 
