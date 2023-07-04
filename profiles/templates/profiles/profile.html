@@ -61,12 +61,12 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-4">
-                        <p class="font-weight-bold">Attendance List</p>
+                        <p class="font-weight-bold">Attendance Email List</p>
                     </div>
                     <div class="col-8">
                         {% for student in item.attendance.all %}
                         <p>
-                        {{ student.first_name }} {{ student.last_name }} <br> 
+                        {{ student.email }} <br> 
                         </p>
                         {% endfor %}
                     </div>
