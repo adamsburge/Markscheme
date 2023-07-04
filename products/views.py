@@ -97,7 +97,7 @@ def digital_product_detail(request, slug):
     product_id = str(digital_product.id)
     productupdates = Updates.objects.filter(product=digital_product)
     if 'USE_AWS' in os.environ:
-        filelink = 'https://markscheme.s3.amazonaws.com/media' + str(digital_product.file)
+        filelink = 'https://markscheme.s3.amazonaws.com/media/' + str(digital_product.file)
     else:
         filelink = "http://127.0.0.1:8000/media/" + str(digital_product.file)
     in_bag = False
