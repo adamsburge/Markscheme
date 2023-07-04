@@ -1,7 +1,9 @@
+import os
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Workshop, DigitalProduct, Product, Updates
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import FileResponse
 from django.conf import settings
 from django.db.models import Q
 from .forms import WorkshopForm, DigitalProductForm, ProductNewsUpdateForm
@@ -94,6 +96,10 @@ def digital_product_detail(request, slug):
     digital_product = get_object_or_404(Product, slug=slug)
     product_id = str(digital_product.id)
     productupdates = Updates.objects.filter(product=digital_product)
+    if 'USE_AWS' in os.environ:
+        filelink = 'https://markscheme.s3.amazonaws.com/media' + str(digital_product.file)
+    else:
+        filelink = "http://127.0.0.1:8000/media/" + str(digital_product.file)
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -106,6 +112,7 @@ def digital_product_detail(request, slug):
         'digital_product': digital_product,
         'in_bag': in_bag,
         'productupdates': productupdates,
+        'filelink': filelink,
     }
 
     return render(request, 'products/digital_product_detail.html', context)
