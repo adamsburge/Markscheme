@@ -1,6 +1,6 @@
 # Welcome to Markscheme
 
-![Am-I-Responsive-Image](media/readme-files/am-i-responsive.png)
+![Am-I-Responsive-Image](media/Readme-files/am-i-responsive.png)
 
 Markscheme is an online ecommerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. The store allows the owners to create two types of products: Workshops and Digital Downloads. Interested users can purchase a ticket to a workshop or purchase a digital download to help them improve their knowledge of topics they plan to take exams for.
 
@@ -25,32 +25,32 @@ I used [balsamiq wireframes](https://balsamiq.com/) to design the UX and UI of t
 
 <details>
 <summary>Home Page</summary>
-<img src="media/readme-files/wireframe-home-page.png">
+<img src="media/Readme-files/wireframe-home-page.png">
 </details>
 
 <details>
 <summary>About Page</summary>
-<img src="media/readme-files/wireframe-about.png">
+<img src="media/Readme-files/wireframe-about.png">
 </details>
 
 <details>
 <summary>Store Page</summary>
-<img src="media/readme-files/wireframe-store.png">
+<img src="media/Readme-files/wireframe-store.png">
 </details>
 
 <details>
 <summary>Workshops Page</summary>
-<img src="media/readme-files/wireframe-workshops.png">
+<img src="media/Readme-files/wireframe-workshops.png">
 </details>
 
 <details>
 <summary>Digital Product Detail Page</summary>
-<img src="media/readme-files/wireframe-product-detail.png">
+<img src="media/Readme-files/wireframe-product-detail.png">
 </details>
 
 <details>
 <summary>Workshop Detail Page</summary>
-<img src="media/readme-files/wireframe-workshop-detail.png">
+<img src="media/Readme-files/wireframe-workshop-detail.png">
 </details>
 
 <details>
@@ -60,30 +60,30 @@ Note: This section has not yet been added to the app. Future updates will includ
 <br>
 <br>
 Blog Page
-<img src="media/readme-files/wireframe-blog.png">
+<img src="media/Readme-files/wireframe-blog.png">
 <br>
 Blog Post Page
-<img src="media/readme-files/wireframe-blog-post.png">
+<img src="media/Readme-files/wireframe-blog-post.png">
 </details>
 
 <details>
 <summary>Normal User Profile Page</summary>
-<img src="media/readme-files/wireframe-normal-user-profile.png">
+<img src="media/Readme-files/wireframe-normal-user-profile.png">
 </details>
 
 <details>
 <summary>Superuser Profile Page</summary>
-<img src="media/readme-files/wireframe-superuser-profile.png">
+<img src="media/Readme-files/wireframe-superuser-profile.png">
 </details>
 
 <details>
 <summary>Log In Page</summary>
-<img src="media/readme-files/wireframe-log-in.png">
+<img src="media/Readme-files/wireframe-log-in.png">
 </details>
 
 <details>
 <summary>Register for Account Page</summary>
-<img src="media/readme-files/wireframe-register.png">
+<img src="media/Readme-files/wireframe-register.png">
 </details>
 
 <br>
