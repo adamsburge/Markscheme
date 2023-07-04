@@ -55,6 +55,7 @@ def workshop_detail(request, slug):
     workshop = get_object_or_404(Product, slug=slug)
     workshop_id = str(workshop.id)
     productupdates = Updates.objects.filter(product=workshop)
+    user_exists = workshop.attendance.filter(username=request.user.username).exists()
     in_bag = False
     if request.session.get('bag', {}):
         bag = list(request.session['bag'])
@@ -69,6 +70,7 @@ def workshop_detail(request, slug):
         'bag': bag,
         'workshop_id': workshop_id,
         'productupdates': productupdates,
+        'user_exists': user_exists,
     }
 
     return render(request, 'products/workshop_detail.html', context)

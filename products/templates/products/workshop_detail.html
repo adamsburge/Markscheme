@@ -69,19 +69,41 @@
                                 </div>
                             </div>
                             <br>
-                            
-                            {% if in_bag %}
+                            {% if user_exists %}
                             <div class="col-12">
-                                <p class="bg-pink text-white rounded p-3">This item is already in your bag. If you wish to reserve a spot for another person, create an account for that person and then purchase spot. </p>
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
+                                <div class="bg-pink text-white rounded p-3">
+                                    <p class="text-center text-uppercase">You are attending this workshop</p>
+                                    <hr color="white";>
+                                    <p class="font-georgia">No need to purchase another spot. You're already booked! Keep an eye out on this page for updates regarding the workshop.</p>
+                                    <p class="font-georgia">If you wish to reserve a spot for another person, create an account for that person and then purchase spot.</p>
+                                </div>
+                                <div class="mx-auto text-center">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                </div>
+                            </div>
+                            {% elif in_bag %}
+                            <div class="col-12">
+                                <div class="bg-pink text-white rounded p-3">
+                                    <p class="text-center text-uppercase">This item is already in your bag</p>
+                                    <hr color="white";>
+                                    <p class="font-georgia">If you wish to reserve a spot for another person, create an account for that person and then purchase spot.</p>
+                                </div>
+                                <div class="mx-auto text-center">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                </div>
                             </div>
                             {% else %}
-                            <div class="col-12">
+                            <div class="col-12 mx-auto text-center">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -102,6 +124,7 @@
             </div>
         </div>
     </div>
+
     {% if productupdates %}
     <div class="col-lg-8 mx-auto mb-5">
         <p class="font-georgia font-weight-bold text-uppercase mt-4 mb-2 text-center">Product Updates: </p>
