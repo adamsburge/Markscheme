@@ -50,7 +50,6 @@ class DigitalProductForm(forms.ModelForm):
     category = forms.ModelChoiceField(
         queryset=Category.objects.filter(name__startswith='d'),
         initial=Category.objects.get(name__startswith='d').id,
-        widget=forms.HiddenInput()
     )
     host_creators = CustomMMCF(
         queryset=User.objects.filter(is_superuser=True),
