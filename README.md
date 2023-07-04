@@ -98,46 +98,43 @@ To access and read the user stories for this project, see my Github project [Mar
 ## Databse Structures
 The database models used for this project were expanded from the models used in Code Institute's 'Boutique Ado' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project uses polymorphism to allow for inherited models which extend the use of the product model thereby allowing for more than one kind of product (i.e., Workshops and Digital Products). Additionally, this project expands the user model beyond that created Code Institute's in the Boutique Ado project.
 
-Additionally, the current project has one model not depicted in the database schema below—the updates model. This model is used to store news/updates regarding both digital products and workshops. This model can be found in the [views.py file of the products app](products/views.py).
+Additionally, the current project has one extra model not depicted in the database schema below—the updates model. This model is used to store news/updates regarding both digital products and workshops. This model can be found in the [models.py file of the products app](products/models.py).
 
-![Sign Up Wireframe](media/databases.png)
+![Databases Wireframe](media/databases.png)
 
 # App Overview
-## Home Page
+## Pages
 
-![Home Page Wireframe](media/home.jpeg)
+<details>
+<summary>Home Page</summary>
+<img src="media/Readme-files/home.png">
+</details>
 
-### About Us
-
-![Home Page Wireframe](media/about.jpeg)
-
-**Note**: This page is not yet completed and could be a future development of the site.
-
-### Staff Page
-
-![Sign Up Wireframe](media/staff.png)
-
-### Register
-
-![Sign Up Wireframe](media/signup.jpeg)
-
-### Sign in
-
-![Sign In Wireframe](media/signin.jpeg)
-
-# Features
-
-## General Features
-
-### Sign up, Sign in, Sign Out
-Any site visitor can register for an account. Once they have done so, they can sign in and out.
-
+<br>
 
 ## Features for Site Visitors and Normal Users
 
-### Browse the Website, Purchase Products
-All site visitors can access the home, about, staff pages as well as the checkout process. Site visitors have the option to registor for an account when checkout out and consequently keep track of their purchases.
+<details>
+<summary>Sign up, Sign in, Sign Out</summary>
+Any site visitor can register for an account. Once they have done so, they can sign in and out.
+</details>
+<br>
+<details>
+<summary>View Posted Updates to Products</summary>
+Any site visitor is able to see updates that have been listed for both workshops and digital products. This allows the customer to make an informed decision when considering purchasing the product as it allows them to see the developments the product has had over time. 
+<br>
+<br>
+However, site users are only able to see product updates which the superusers have indicated is a 'Major Update' (which the superuser does by checking a box when updating the product). This allows the superusers to update the products and only show updates to site users that are relevant to the customer. For example, a superuser might choose to indicate that a new release of a handbook is a major update, but indicate that correcting a typo in the description is a minor update and consequently not something the customer needs to be aware of.
+</details>
 
+<br>
+
+<details>
+<summary>Browse the Website, Purchase Products</summary>
+All site visitors can access the home, about, staff pages as well as the checkout process. Site visitors have the option to registor for an account when checkout out and consequently keep track of their purchases.
+</details>
+
+<br>
 
 ## Features Users with Profiles
 
