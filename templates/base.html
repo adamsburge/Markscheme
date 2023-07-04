@@ -24,7 +24,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif+Georgian:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -43,7 +43,6 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Markscheme {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header id="header" class="container-fluid fixed-top bg-white">
@@ -70,7 +69,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-options-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 {% if request.user.is_superuser %}
@@ -81,7 +80,7 @@
                                 
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options-1">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_workshop' %}" class="dropdown-item">Add Workshop</a>
@@ -142,16 +141,8 @@
             </div>
             <div class="col-8 col-md-4">
                 <!-- This form came from Mailchimp and has been modified to meet the needs of this project -->
-                <div id="mc_embed_shell">
+                <div style="background: #343a3f; clear: left; color: white; max-height: 150px;" id="mc_embed_shell">
                     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-                    <style type="text/css">
-                        #mc_embed_signup {
-                            background: #343a3f;
-                            clear: left;
-                            color: white;
-                            max-height: 150px;
-                        }
-                    </style>
                     <div id="mc_embed_signup">
                         <form
                             action="https://gmail.us21.list-manage.com/subscribe/post?u=77148d658e9a1b4ac6b525863&amp;id=ee0e4dc50d&amp;f_id=000053e1f0"
@@ -189,9 +180,9 @@
                             </div>
                         </form>
                     </div>
-                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
                     <script
-                        type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = EMAIL; ftypes[0] = merge;, fnames[1] = FNAME; ftypes[1] = merge;, fnames[2] = LNAME; ftypes[2] = merge;, fnames[3] = ADDRESS; ftypes[3] = merge;, fnames[4] = PHONE; ftypes[4] = merge;, fnames[5] = BIRTHDAY; ftypes[5] = merge; false }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+                        >(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = EMAIL; ftypes[0] = merge;, fnames[1] = FNAME; ftypes[1] = merge;, fnames[2] = LNAME; ftypes[2] = merge;, fnames[3] = ADDRESS; ftypes[3] = merge;, fnames[4] = PHONE; ftypes[4] = merge;, fnames[5] = BIRTHDAY; ftypes[5] = merge; false }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
                 </div>            
             </div>
             <div class="col-8 col-md-4">
