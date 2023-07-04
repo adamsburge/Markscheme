@@ -118,25 +118,32 @@ Additionally, the current project has one extra model not depicted in the databa
 <summary>Sign up, Sign in, Sign Out</summary>
 Any site visitor can register for an account. Once they have done so, they can sign in and out.
 </details>
-<br>
+
 <details>
-<summary>View Posted Updates to Products</summary>
+<summary>Browse the Website</summary>
+All site visitors can access the home, about, staff pages. Additionally, all vistors to the website can see all the workshops and digital products the company has on offer.
+</details>
+
+<details>
+<summary>View Updates to Products</summary>
 Any site visitor is able to see updates that have been listed for both workshops and digital products. This allows the customer to make an informed decision when considering purchasing the product as it allows them to see the developments the product has had over time. 
 <br>
 <br>
 However, site users are only able to see product updates which the superusers have indicated is a 'Major Update' (which the superuser does by checking a box when updating the product). This allows the superusers to update the products and only show updates to site users that are relevant to the customer. For example, a superuser might choose to indicate that a new release of a handbook is a major update, but indicate that correcting a typo in the description is a minor update and consequently not something the customer needs to be aware of.
 </details>
 
-<br>
-
 <details>
-<summary>Browse the Website, Purchase Products</summary>
-All site visitors can access the home, about, staff pages as well as the checkout process. Site visitors have the option to registor for an account when checkout out and consequently keep track of their purchases.
+<summary>Limited to One Item Per Product in Bag</summary>
+As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users add an item to their basket, the 'Add to Basket' button disappears and an info box appears informing them that they already have this item in their bag. Users who wish to purchase attendance to workshops for other students are encouraged to create accounts for those students. 
 </details>
 
 <br>
 
 ## Features Users with Profiles
+
+#### Purchase products
+
+NEED TO ADD THIS FEATURE
 
 
 ### Update Billing Details and Purchase History
@@ -144,12 +151,23 @@ Users who have signed up for an account have access to their account and can upd
 
 ![Sign Up Wireframe](media/profile.png)
 
+<details>
+<summary>Limited to One Purchase Per Product</summary>
+As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users have purchased a product and return to the product's page (where they can access the download link), the 'Add to Bag' button no longer appears. If the product is a digital product, the 'Add to Bag' button is replaced with the button to download the file.
+</details>
+
 ## Features for Admin Only
 
-### Add, Update and Delete Posts
+### View Attendance List
 Super users are able to see a list of classes which they are teaching as well as the attendance lists for those classes
 
 ![Sign Up Wireframe](media/superprofile.png)
+
+
+- Edit Products
+- Edit their profile information
+- Add updates to products
+- 
 
 
 # Technologies
