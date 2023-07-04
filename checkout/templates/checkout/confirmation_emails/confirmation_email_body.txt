@@ -7,6 +7,8 @@ Order Date: {{ order.date }}
 
 Order Total: ${{ order.order_total }}
 
+If you purchased a digital item, just go back to the item's page on our website in order to download it. Alternatively, you can visit your profile, look at your purchase history, and follow the links there to download your digital product.
+
 If you have any questions, don't hesitate to contact us at {{ contact_email }}.
 
 Again, many thanks for your order.
