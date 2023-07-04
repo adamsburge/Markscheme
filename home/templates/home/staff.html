@@ -23,48 +23,28 @@
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for member in staff %}
-                    {% if member.user.is_superuser %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if member.profile_image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ member.profile_image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0 font-weight-bold pb-2 font-playfair text-uppercase">{{ member.user.first_name }} {{ member.user.last_name }}</p>
-                                    <p class="mb-0 pb-2 card-smaller-text font-georgia"></p>
-                                    <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Position:</span> {{ member.position }}</p>
-                                    <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Degree:</span> {{ member.degree }} </p>
-                                    <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Subjects Taught:</span> {{ member.subjects_taught }} </p>
-                                    <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Bio:</span><br>{{ member.bio }} </p>
+                        {% if member.user.is_superuser %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card h-100 border-0">
+                                    {% if member.profile_image %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ member.profile_image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0 font-weight-bold pb-2 font-playfair text-uppercase">{{ member.user.first_name }} {{ member.user.last_name }}</p>
+                                        <p class="mb-0 pb-2 card-smaller-text font-georgia"></p>
+                                        <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Position:</span> {{ member.position }}</p>
+                                        <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Degree:</span> {{ member.degree }} </p>
+                                        <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Subjects Taught:</span> {{ member.subjects_taught }} </p>
+                                        <p class="mb-0 pb-2 card-smaller-text"><span class="font-weight-bold">Bio:</span><br>{{ member.bio }} </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
                         {% endif %}
                     {% endfor %}
                 </div>
