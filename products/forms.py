@@ -59,7 +59,7 @@ class DigitalProductForm(forms.ModelForm):
 
     class Meta:
         model = DigitalProduct
-        fields = ('name', 'description', 'pages', 'host_creators', 'price', 'image', 'file', )
+        fields = ('name', 'description', 'category', 'pages', 'host_creators', 'price', 'image', 'file', )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
