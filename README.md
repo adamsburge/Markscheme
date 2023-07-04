@@ -98,6 +98,8 @@ To access and read the user stories for this project, see my Github project [Mar
 ## Databse Structures
 The database models used for this project were expanded from the models used in Code Institute's 'Boutique Ado' walkthrough project. However, these have been adjusted and added to for the purpose of the current project. Notably, this project uses polymorphism to allow for inherited models which extend the use of the product model thereby allowing for more than one kind of product (i.e., Workshops and Digital Products). Additionally, this project expands the user model beyond that created Code Institute's in the Boutique Ado project.
 
+Additionally, the current project has one model not depicted in the database schema below—the updates model. This model is used to store news/updates regarding both digital products and workshops. This model can be found in the [views.py file of the products app](products/views.py).
+
 ![Sign Up Wireframe](media/databases.png)
 
 # App Overview
