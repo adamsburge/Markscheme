@@ -74,7 +74,13 @@ The second method for the site user to sign up for the newsletter is via the sma
 
 <details>
 <summary>SEO</summary>
+I have implemented strong SEO marketing for this website. As the target audience will likely be using search engines like Google to find affordable exam preparation options, SEO marketing is a crucial marketing strategy for the success of this business. See below the code used for the SEO marketing on the base template (i.e., applied every page of the site) as well as the SEO score provided by Google's Lighthouse Analysis.
 
+<img src="media/Readme-files/seo-marketing.png">
+
+<br>
+
+<img src="media/Readme-files/lighthouse-desktop.png">
 </details>
 
 <br>
