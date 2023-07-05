@@ -150,24 +150,161 @@ The Javascript for the site has been checked for errors with the <a href="https:
 
 <details>
 <summary>Python:</summary>
-The Python for this site has been linted by both the built-in linter in VSCode as well as the <a href="https://pep8ci.herokuapp.com/">Code Institute Pep8 linter</a>. No significant errors were found other than indications that some lines were too long and warnings where I preferred to use tabs instead of spaces.
+The Python for this site has been linted by both the built-in linter in VSCode as well as the <a href="https://pep8ci.herokuapp.com/">Code Institute Pep8 linter</a>. No significant errors were found excepting four lines from the settings.py file which were indicated as being too long. These lines, however, are part of the code for Allauth and cannot be altered without affecting the efficacy of that app. See below the images of the code validation for each python file.
 
+<br>
 
+<details>
+<summary>Markscheme Project Urls.py</summary>
+<img src="media/Readme-files/markscheme.urls.png">
+</details>
+
+<details>
+<summary>Bag App</summary>
+
+<details>
+<summary>contexts.py</summary>
+<img src="media/Readme-files/bag.contexts.png">
+</details>
+
+<details>
+<summary>views.py</summary>
+<img src="media/Readme-files/bag.contexts.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Checkout App</summary>
+
+<details>
+<summary>admin.py</summary>
+<img src="media/Readme-files/checkout.admin.png">
+</details>
+
+<details>
+<summary>apps.py</summary>
+<img src="media/Readme-files/checkout.apps.png">
+</details>
+
+<details>
+<summary>forms.py</summary>
+<img src="media/Readme-files/checkout.forms.png">
+</details>
+
+<details>
+<summary>models.py</summary>
+<img src="media/Readme-files/checkout.models.png">
+</details>
+
+<details>
+<summary>signals.py</summary>
+<img src="media/Readme-files/checkout.signals.png">
+</details>
+
+<details>
+<summary>urls.py</summary>
+<img src="media/Readme-files/checkout.urls.png">
+</details>
+
+<details>
+<summary>views.py</summary>
+<img src="media/Readme-files/checkout.views.png">
+</details>
+
+<hr>
+
+</details>
+
+<details>
+<summary>Home App</summary>
+
+<details>
+<summary>urls.py</summary>
+<img src="media/Readme-files/home.urls.png">
+</details>
+
+<details>
+<summary>views.py</summary>
+<img src="media/Readme-files/home.views.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Products App</summary>
+
+<details>
+<summary>admin.py</summary>
+<img src="media/Readme-files/products.admin.png">
+</details>
+
+<details>
+<summary>forms.py</summary>
+<img src="media/Readme-files/products.forms.png">
+</details>
+
+<details>
+<summary>models.py</summary>
+<img src="media/Readme-files/products.models.png">
+</details>
+
+<details>
+<summary>urls.py</summary>
+<img src="media/Readme-files/products.urls.png">
+</details>
+
+<details>
+<summary>views.py</summary>
+<img src="media/Readme-files/products.views.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Profiles App</summary>
+
+<details>
+<summary>forms.py</summary>
+<img src="media/Readme-files/profiles.forms.png">
+</details>
+
+<details>
+<summary>models.py</summary>
+<img src="media/Readme-files/profiles.models.png">
+</details>
+
+<details>
+<summary>urls.py</summary>
+<img src="media/Readme-files/profiles.urls.png">
+</details>
+
+<details>
+<summary>views.py</summary>
+<img src="media/Readme-files/profiles.views.png">
+</details>
+
+<hr>
+</details>
+
+<hr>
+</details>
 
 </details>
 <hr>
-
-
-
+<br>
 
 ## Accessibility:
 - I have checked the site for accessibility with Google's Lighthouse tool.
     - For Mobile: 
-        ![Home Page Wireframe](media/lighthousemobile.png)
+        ![Lighthouse Mobile](media/Readme-files/lighthouse-mobile.png)
         
         
     - For Desktop:
-        ![Home Page Wireframe](media/lighthouse.png)
+        ![Lighthouse Mobile](media/Readme-files/lighthouse-desktop.png)
 
 
 ## Bugs
@@ -175,11 +312,12 @@ The Python for this site has been linted by both the built-in linter in VSCode a
 ### Solved
 - Deployment to Heroku
     - When I initially attempted to deploy this project to Heroku (using AWS S3 for static files), I was unable to get my static files to load to AWS S3. I managed to solve this when I found that I had an unneccessary environment variable that was preventing me from uploading static files.
+- Several purchases allowed:
+  - Early on in the development of the app, users were allowed to repurchase an item that they already own. I managed to prevent this by checking if the using is in the list of product owners before displaying the 'Add to Bag' button. This also provided a convenient place to put the digital file download button as it now replaces the 'Add to Bag' button when the user already owns the digital product.
 
 ### Unsolved
-- Subscription form:
-  - As I ran out of time, I was unable to place the subscription form in a better place. In the future 
-- Several purchases allowed:
-  - At the moment, users are allowed to repurchase an item that they already own. In the future, I could prevent this and redirect them to the page where they could download the file.
+
+- No names in attendance list
+  - Currently, the workshop attendance list displayed to the superuser only includes the emails of the individuals signed up for the workshop. In the future, I could rework the sign up form provided by Allauth to make it require a first and last name in order for the user profiles to have this information. Alternatively, I could split the full name that is gathered upon checking out for a workshop purchase and then save that information to the user's profile. 
 - No Messages:
   - In the interest of time, I did not add messages to this webapp. However, most of the functionality is place to display these messages. This is certainly something that could be done in the future.
