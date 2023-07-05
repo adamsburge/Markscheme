@@ -18,8 +18,26 @@ This project was coded locally on VS Code and is deployed using Heroku. The stat
    3. `git push`
 
 #### Setting up a Database
-1. Create a free account with Elephantsql, obtain a database url and put it into the env.py file
-2. Create a unique secret key and put that into the env.py file
+1. Create a free account with [Elephantsql](https://www.elephantsql.com/), or log in if you already have an account. This is where your databases will be hosted.
+2. Obtain a database url. To do this, first click the 'create new instance' button on the home/dashboard page of Elephantsql. Name the database what you like (ideally the same name as the app you're making), select the 'Tiny Turtle' or free plan, select your region and then submit the form. After this, you can obtain the database url by clicking on your new database and lookin under where it says 'URL'. Make sure to copy this database url as it will be needed later.
+
+#### Set Up Stripe
+1. Sign into [Stripe](https://dashboard.stripe.com/login), or create an account and then sign in and then go to the home tab.
+2. Go to the developers section. Here you will find two values–1. the stripe secret key and 2. the stripe public key. You will need to copy these and have them ready later.
+3. In the developer section, click on webhooks and add a new end point. The url for this end point should be https://nameofyourwebsite.com/checkout/wh/. Then select the events this webhook will receive and add the end point.
+4. Run tests to make sure your webhook is working. As stripe is always updating their system, it is best to read their current documentation if you get confused.
+
+
+#### Set Up Heroku
+1. Sign into [Heroku](https://www.heroku.com/home), or create an account and then sign in.
+2. Create a new app by clicking on the box in the top right corner that says 'New' and then selecting 'Create New App'. Fill out the information required by giving the app a name and selecting your preferred region.
+
+3. Create a unique secret key and put that into the env.py file
+
+
+
+
+#### Set up Amazon S3
 3. Set up account with Amazon S3:
    1. Create bucket
    2. Give bucket permissions 
