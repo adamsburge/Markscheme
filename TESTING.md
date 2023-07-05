@@ -144,7 +144,21 @@ The CSS for the site has been checked for errors with the <a href="https://jigsa
 <summary>Javascript:</summary>
 The Javascript for the site has been checked for errors with the <a href="https://jshint.com">JSHint Website</a> and no errors were found.
 
+<br>
+
+<details>
+<summary>countryfield.js</summary>
+<img src="media/Readme-files/js-check-countryfield.png">
 </details>
+
+<details>
+<summary>stripe_elements.js</summary>
+<img src="media/Readme-files/js-check-stripe_elements.png">
+</details>
+
+</details>
+
+<br>
 
 <hr>
 
@@ -152,6 +166,7 @@ The Javascript for the site has been checked for errors with the <a href="https:
 <summary>Python:</summary>
 The Python for this site has been linted by both the built-in linter in VSCode as well as the <a href="https://pep8ci.herokuapp.com/">Code Institute Pep8 linter</a>. No significant errors were found excepting four lines from the settings.py file which were indicated as being too long. These lines, however, are part of the code for Allauth and cannot be altered without affecting the efficacy of that app. See below the images of the code validation for each python file.
 
+<br>
 <br>
 
 <details>
