@@ -202,6 +202,11 @@ Additionally, the current project has one extra model not depicted in the databa
 </details>
 
 <details>
+<summary>Add Workshop Page</summary>
+<img src="media/Readme-files/add-workshop.png">
+</details>
+
+<details>
 <summary>Workshop Detail Page</summary>
 <img src="media/Readme-files/workshop-detail.png">
 </details>
@@ -209,6 +214,11 @@ Additionally, the current project has one extra model not depicted in the databa
 <details>
 <summary>Digital Products Page</summary>
 <img src="media/Readme-files/digital-products.png">
+</details>
+
+<details>
+<summary>Add Digital Product Page</summary>
+<img src="media/Readme-files/add-digital-product.png">
 </details>
 
 <details>
@@ -301,6 +311,14 @@ Any site visitor is able to see updates that have been listed for both workshops
 <br>
 <br>
 However, site users are only able to see product updates which the superusers have indicated is a 'Major Update' (which the superuser does by checking a box when updating the product). This allows the superusers to update the products and only show updates to site users that are relevant to the customer. For example, a superuser might choose to indicate that a new release of a handbook is a major update, but indicate that correcting a typo in the description is a minor update and consequently not something the customer needs to be aware of.
+
+<img src="media/Readme-files/workshop-updates-1.png">
+
+<img src="media/Readme-files/workshop-updates-2.png">
+
+<img src="media/Readme-files/digital-product-updates.png">
+
+
 </details>
 
 <br>
@@ -310,17 +328,30 @@ However, site users are only able to see product updates which the superusers ha
 <details>
 <summary>Add Item to Bag and Checkout</summary>
 As this site sells digital files, it is important for customers to have an account. Having an account allows the user to access the any purchased digital products. If the site visitor does not have an account or is not logged in, they will be unable to add a product to their bag (and consequently to checkout) and will be prompted to create an account.
+
+<img src="media/Readme-files/not-logged-in-product-detail.png">
+
 </details>
 
 <details>
 <summary>Limited to One Item Per Product in Bag</summary>
 As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users add an item to their basket, the 'Add to Basket' button disappears and an info box appears informing them that they already have this item in their bag. Users who wish to purchase attendance to workshops for other students are encouraged to create accounts for those students. 
+<br>
+
+<img src="media/Readme-files/workshop-in-bag.png">
+
+<img src="media/Readme-files/digital-product-in-bag.png">
+
 </details>
 
 <details>
 <summary>Limited to One Purchase Per Product</summary>
 As this webapp is intended to sell workshop attendance and digital products, all users are limited to one purchase per product. If users have purchased a product and return to the product's page (where they can access the download link), the 'Add to Bag' button no longer appears. If the product is a digital product, the 'Add to Bag' button is replaced with the button to download the file.
-</details>
+
+<img src="media/Readme-files/workshop-attendance.png">
+
+<img src="media/Readme-files/digital-product-download.png">
+
 
 <details>
 <summary>Update Billing Details and View Purchase History</summary>
