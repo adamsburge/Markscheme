@@ -432,7 +432,7 @@ To read about the manual testing employed in this project, read the [TESTING.md 
 <br>
 
 # Deployment
-To read about how this site was deployed and learn how to duplicate it, read the [DEPLOYMENT.md file](DEPLOYMENT.md)。
+To read about how this site was deployed and learn how to duplicate it, read the [DEPLOYMENT.md file](DEPLOYMENT.md).
 <br>
 <br>
 

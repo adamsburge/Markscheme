@@ -7,14 +7,157 @@
     - The webapp looks good on all the major desktop web browsers and all the most popular tablet and mobile devices. I can confirm that the website looks good on all screensizes.
 
 ## Code Validator Testing
-- HTML:
-    - The HTML for the site has been checked for errors with the [W3 NU HTML Checker](https://validator.w3.org/nu/) and cleared with no errors reported.
-- CSS:
-    - The CSS for the site has been checked for errors with the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and passed with no errors found.
-- Javascript:
-    - The Javascript for the site has been checked for errors with the [JSHint Website](https://jshint.com) and no errors were found.
-- Python:
-    - The Python for this site has been linted by both the built-in linter in Gitpod as well as the Code Institute Pep8 replacement linter. No significant errors were found other than indications that some lines were too long and warnings where I preferred to use tabs instead of spaces.
+
+<details>
+<summary>HTML:</summary>
+The HTML for every webpage on this site has been checked for errors with the <a href="https://validator.w3.org/nu/">W3 NU HTML Checker</a> and cleared with no errors reported. Click below to see the validator testing scores.
+
+<br>
+
+<details>
+<summary>Home Page</summary>
+<img src="media/Readme-files/html-check-home.png">
+</details>
+
+<details>
+<summary>About Page</summary>
+<img src="media/Readme-files/html-check-about-png.png">
+</details>
+
+<details>
+<summary>Staff Page</summary>
+<img src="media/Readme-files/html-check-staff.png">
+</details>
+
+<details>
+<summary>Product Pages</summary>
+
+<details>
+<summary>Workshops Page</summary>
+<img src="media/Readme-files/html-check-workshops.png">
+</details>
+
+<details>
+<summary>Add Workshop Page</summary>
+<img src="media/Readme-files/html-check-add-workshop.png">
+</details>
+
+<details>
+<summary>Workshop Detail Page</summary>
+<img src="media/Readme-files/html-check-workshop-detail.png">
+</details>
+
+<details>
+<summary>Digital Products Page</summary>
+<img src="media/Readme-files/html-check-digital-products.png">
+</details>
+
+<details>
+<summary>Add Digital Product Page</summary>
+<img src="media/Readme-files/html-check-add-digital-product.png">
+</details>
+
+<details>
+<summary>Digital Product Detail Page</summary>
+<img src="media/Readme-files/html-check-digital-product-detail.png">
+</details>
+
+<details>
+<summary>All Products Page</summary>
+<img src="media/Readme-files/html-check-products.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Checkout Pages</summary>
+
+<details>
+<summary>Bag Page</summary>
+<img src="media/Readme-files/html-check-bag.png">
+</details>
+
+<details>
+<summary>Checkout Form</summary>
+<img src="media/Readme-files/html-check-checkout.png">
+</details>
+
+<details>
+<summary>Checkout Success</summary>
+<img src="media/Readme-files/html-check-order-history.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Profile Pages</summary>
+
+<details>
+<summary>Normal User Profile</summary>
+<img src="media/Readme-files/html-check-profile.png">
+</details>
+
+<details>
+<summary>Superuser Profile</summary>
+<img src="media/Readme-files/html-check-profile.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Registration and Sign In Pages</summary>
+
+<details>
+<summary>Log In Page</summary>
+<img src="media/Readme-files/html-check-log-in.png">
+</details>
+
+<details>
+<summary>Sign Up Page</summary>
+<img src="media/Readme-files/html-check-sign-up.png">
+</details>
+
+<hr>
+</details>
+
+<br>
+
+</details>
+
+<hr>
+
+<details>
+<summary>CSS:</summary>
+The CSS for the site has been checked for errors with the <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validator</a> and passed with no errors found.
+
+<br>
+
+<img src="media/Readme-files/website-css-check.png">
+</details>
+
+<hr>
+
+<details>
+<summary>Javascript:</summary>
+The Javascript for the site has been checked for errors with the <a href="https://jshint.com">JSHint Website</a> and no errors were found.
+
+</details>
+
+<hr>
+
+<details>
+<summary>Python:</summary>
+The Python for this site has been linted by both the built-in linter in VSCode as well as the <a href="https://pep8ci.herokuapp.com/">Code Institute Pep8 linter</a>. No significant errors were found other than indications that some lines were too long and warnings where I preferred to use tabs instead of spaces.
+
+
+
+</details>
+<hr>
+
+
 
 
 ## Accessibility:
