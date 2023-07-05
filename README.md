@@ -48,7 +48,10 @@ The target market for this audience is teenagers and parents of both all of whom
 
 <details>
 <summary>Facebook Marketing</summary>
-
+As I do not have a Facebook account and intentionally avoid social media for personal reasons, I opted to use Code Institute's mock Facebook wireframe and design a Facebook Marketing campaign there. The result can be seen below. This marketing campaing design can also be viewed in <a href="markscheme_facebook_advertisement">pdf format heremarkscheme</a>.
+<br>
+<br>
+<img src="media/Readme-files/markscheme_facebook_advertisement.png">
 </details>
 
 <details>
