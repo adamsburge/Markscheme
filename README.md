@@ -183,6 +183,102 @@ Additionally, the current project has one extra model not depicted in the databa
 <img src="media/Readme-files/home.png">
 </details>
 
+<details>
+<summary>About Page</summary>
+<img src="media/Readme-files/about.png">
+</details>
+
+<details>
+<summary>Staff Page</summary>
+<img src="media/Readme-files/staff.png">
+</details>
+
+<details>
+<summary>Product Pages</summary>
+
+<details>
+<summary>Workshops Page</summary>
+<img src="media/Readme-files/workshops.png">
+</details>
+
+<details>
+<summary>Workshop Detail Page</summary>
+<img src="media/Readme-files/workshop-detail.png">
+</details>
+
+<details>
+<summary>Digital Products Page</summary>
+<img src="media/Readme-files/digital-products.png">
+</details>
+
+<details>
+<summary>Digital Product Detail Page</summary>
+<img src="media/Readme-files/digital-product-detail.png">
+</details>
+
+<details>
+<summary>All Products Page</summary>
+<img src="media/Readme-files/products.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Checkout Pages</summary>
+
+<details>
+<summary>Bag Page</summary>
+<img src="media/Readme-files/bag-1.png">
+<img src="media/Readme-files/bag-2.png">
+</details>
+
+<details>
+<summary>Checkout Form</summary>
+<img src="media/Readme-files/checkout-1.png">
+<img src="media/Readme-files/checkout-2.png">
+</details>
+
+<details>
+<summary>Checkout Success</summary>
+<img src="media/Readme-files/checkout-success.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Profile Pages</summary>
+
+<details>
+<summary>Normal User Profile</summary>
+<img src="media/Readme-files/normal-user-profile.png">
+</details>
+
+<details>
+<summary>Superuser Profile</summary>
+<img src="media/Readme-files/superuser-profile.png">
+</details>
+
+<hr>
+</details>
+
+<details>
+<summary>Registration and Sign In Pages</summary>
+
+<details>
+<summary>Log In Page</summary>
+<img src="media/Readme-files/sign-in.png">
+</details>
+
+<details>
+<summary>Sign Up Page</summary>
+<img src="media/Readme-files/sign-up.png">
+</details>
+
+<hr>
+</details>
+
 <br>
 
 ## Features for Site Visitors
@@ -199,7 +295,9 @@ All site visitors can access the home, about, staff pages. Additionally, all vis
 
 <details>
 <summary>View Updates to Products</summary>
-Any site visitor is able to see updates that have been listed for both workshops and digital products. This allows the customer to make an informed decision when considering purchasing the product as it allows them to see the developments the product has had over time. 
+Any site visitor is able to see updates that have been listed for both workshops and digital products. This allows the customer to make an informed decision when considering purchasing the product as it allows them to see the developments the product has had over time.
+
+
 <br>
 <br>
 However, site users are only able to see product updates which the superusers have indicated is a 'Major Update' (which the superuser does by checking a box when updating the product). This allows the superusers to update the products and only show updates to site users that are relevant to the customer. For example, a superuser might choose to indicate that a new release of a handbook is a major update, but indicate that correcting a typo in the description is a minor update and consequently not something the customer needs to be aware of.
