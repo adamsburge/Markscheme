@@ -72,10 +72,6 @@ The second method for the site user to sign up for the newsletter is via the sma
 
 </details>
 
-<br>
-
-</details>
-
 <details>
 <summary>SEO</summary>
 
