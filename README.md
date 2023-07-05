@@ -9,10 +9,16 @@ Markscheme is an online e-commerce store that allows teachers and tutors to adve
 # Project Planning 
 
 ## Business Model
-Markscheme is intended to be a B2C, or Business to Customer e-commerce business. The business was developed to connect tutors and teachers with students who are preparing for exams or who simply wish to better understand a certain topic. Additionally, by allowing teachers to sell digital products, Markscheme allows teachers to make more income using their subject specialisation than if they were to just teach workshops. The student is able to search for and find the right product to help them best succeed at their exams.
+Markscheme is intended to be a B2C, or Business to Customer e-commerce business. The business was developed to connect tutors and teachers with students who are preparing for exams or who simply wish to better understand a certain topic. Additionally, by allowing teachers to sell digital products, Markscheme allows teachers to make more income using their subject specialisation than if they were to just teach workshops. The student is able to search for and find the right product to help them best succeed at their exams. The business allows the site owners to sell two types of products—workshop attendance and digital products in the form of pdfs.
 
 <br>
 <br>
+
+<details>
+<summary>Purpose and Value</summary>
+All students in the United Kingdom must pass a set of exams called GCSEs. Additionally, many go on to undertake A-Level or IB exams which typically allow the student to pursue a university education or work. Due to these requirements, many teenagers and parents are regularly looking for affordable, but effective tutoring and study materials. Markscheme meets this need by not only providing affordable tutoring and study material, but also by providing the teenager and parent the ability to choose between purchasing guided-tutoring sessions (called 'workshops') and self-guided handbooks (called 'digital products').
+<br>
+</details>
 
 <details>
 <summary>Site User/Customer Goals</summary>
