@@ -352,6 +352,8 @@ As this webapp is intended to sell workshop attendance and digital products, all
 
 <img src="media/Readme-files/digital-product-download.png">
 
+</details>
+
 
 <details>
 <summary>Update Billing Details and View Purchase History</summary>
