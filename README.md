@@ -48,7 +48,7 @@ The target market for this audience is teenagers and parents of both all of whom
 
 <details>
 <summary>Facebook Marketing</summary>
-As I do not have a Facebook account and intentionally avoid social media for personal reasons, I opted to use Code Institute's mock Facebook wireframe and design a Facebook Marketing campaign there. The result can be seen below. This marketing campaing design can also be viewed in <a href="markscheme_facebook_advertisement">pdf format heremarkscheme</a>.
+As I do not have a Facebook account and intentionally avoid social media for personal reasons, I opted to use Code Institute's mock Facebook wireframe and design a Facebook Marketing campaign there. The result can be seen below. A PDF version of this design is also available in the file list above.
 <br>
 <br>
 <img src="media/Readme-files/markscheme_facebook_advertisement.png">
@@ -56,7 +56,18 @@ As I do not have a Facebook account and intentionally avoid social media for per
 
 <details>
 <summary>Email Marketing</summary>
+This project makes use of <a href="https://mailchimp.com/?currency=GBP" target="_blank">MailChimp</a> to undertake its email marketing campaigns. Site visitors are able to sign up to receive email newsletters in two methods. The first appears 5 seconds after the user visits the site for the first time (or the first time since their cache has been cleared). This newsletter signup form comes out from the bottom right of the screen on desktop and from the top on mobile. It prompts the site visitor to either fill in their first name, last name and email or to exit out of the form. See the image below.
 
+<br>
+<img src="media/Readme-files/newsletter-signup.png">
+</details>
+<br>
+The second method for the site user to sign up for the newsletter is via the smaller form in the footer. Unlike the first method, this smaller, more abbreviated newsletter form is always present on every single page of the website. This form only requests the user's email address, but otherwise does the same thing as the expanded form outlined above. See the image below.
+
+<br>
+<img src="media/Readme-files/footer-newsletter.png">
+<br>
+<br> 
 </details>
 
 <details>
