@@ -9,67 +9,132 @@
 
 <url>
   <loc>https://markscheme.herokuapp.com/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/accounts/login/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/bag/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/about/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/products/workshops/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/products/digital_products/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/products/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/staff/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/workshops/spanish-workshop/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/products/workshops/introduction-to-physics/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/products/workshops/maths-gcse-prep-course/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/workshops/modern-world-history/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/workshops/french-101/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://markscheme.herokuapp.com/products/workshops/english-literature-survey/</loc>
-  <lastmod>2023-05-12T10:22:25+00:00</lastmod>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/workshops/german-workshop/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/workshops/latin-gcse-prep-course/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/world-history-handbook/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/french-handbook/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/handbook-for-english-literature/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/maths-gcse-prep-course-manual/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/latin-gcse-prep-handbook/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/spanish-handbook/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/german-handbook/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://markscheme.herokuapp.com/products/digital_products/physics-handbook/</loc>
+  <lastmod>2023-07-05T06:01:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
