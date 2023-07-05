@@ -451,6 +451,8 @@ To read about how this site was deployed and learn how to duplicate it, read the
     - The content of this website is entirely fictitious.
     - The photos on this site come from UnSplash and I am very grateful for the photographers who provided such incredible photos
     - The no_image file used for when there is no image to display, comes from [this wikimedia url](https://commons.wikimedia.org/wiki/File:No_Image_Available.jpg)
+    - Information about deployment and business models:
+      - My memory of how to deploy this project as well as what is necessary in a business model was greatly refreshed by reading through [this project](https://github.com/rockroman/CI_PP5_Blade/tree/main#deployment) and [this project](https://github.com/NaoiseGaffney/BookRepository) by other Code Institute students.
 - Code: 
     - I spent several hours watching videos by John Elder on his channel [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy), particularly his Django Wednesdays playlist. It would be impossible to list every line of my code that was influenced by his videos, though his most significant influence was in helping solidify my understanding of the Django framework as a whole.
     - Various forums such as Stack Exchange and Stack Overflow helped to solve small problems when I was stuck on a line of code.
