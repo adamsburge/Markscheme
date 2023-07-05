@@ -9,18 +9,36 @@ Markscheme is an online e-commerce store that allows teachers and tutors to adve
 # Project Planning 
 
 ## Business Model
-<details>
-<summary>User Goals</summary>
+Markscheme is intended to be a B2C, or Business to Customer e-commerce business. The business was developed to connect tutors and teachers with students who are preparing for exams or who simply wish to better understand a certain topic. Additionally, by allowing teachers to sell digital products, Markscheme allows teachers to make more income using their subject specialisation than if they were to just teach workshops. The student is able to search for and find the right product to help them best succeed at their exams.
 
+<br>
+<br>
+
+<details>
+<summary>Site User/Customer Goals</summary>
+<ul>
+<li>Search for and easily find study materials to help them pass their exams</li>
+<li>Be able to choose between products that offer guided instruction (i.e., workshops) or products that allow a self-teaching approach (i.e., digital products)</li>
+<li>Assess digital products for sale by seeing how regularly the material is updated</li>
+<li>Easily create an account and purchase products they are interested in</li>
+</ul>
+
+<br>
 </details>
 
 <details>
 <summary>Site Owner Goals</summary>
-
+<ul>
+<li>Allow teachers and tutors to maximise potential teaching income by helping them reach larger audiences for planned teaching workshops</li>
+<li>Allow teachers and tutors to earn passive income by selling pdf study guides</li>
+<li>Allow teachers and tutors to share their passion for their subject with more students than is normally possible without internet marketing</li>
+</ul>
+<br>
 </details>
 
 <details>
 <summary>Target Market and Customer Persona</summary>
+The target market for this audience is teenagers and parents of both all of whom have an interest in finding accessible study material and/or tutoring to help the child/teenager pass GCSE, A-Level and/or IB exams. Due to the fact that all teenagers in England must pass GCSE exams, prices for study materials and tutoring for these exams can be expensive. Markscheme provides a service where teenagers and parents can search and find products that fit their needs and their budget.
 
 </details>
 
@@ -235,27 +253,18 @@ On the right side of the superuser's profile page superusers are able to see a l
 
 # Testing
 To read about the manual testing employed in this project, read the [TESTING.md file](TESTING.md).
+<br>
+<br>
 
 # Deployment
-This project is deployed using Heroku and AWS S3
-
-Steps for Deployment:
-1. Fork or Clone this Depository
-2. Create new Heroku app
-3. Install django
-4. Create a free account with Elephantsql, obtain a database url and put it into the env.py file
-5. Create a unique secret key and put that into the env.py file
-6. Set up account with Amazon S3:
-   1. Create bucket
-   2. Give bucket permissions 
-7. Make migrations
-8. Link the Heroku app to the repository
-9. Push to Heroku
+To read about how this site was deployed and learn how to duplicate it, read the [DEPLOYMENT.md file](DEPLOYMENT.md)。
+<br>
+<br>
 
 
 # Credits
-- Deployment aesthetic:
-    - The general layout of this app is based on Code Institute's Boutique Ado project The aesthetic, however, is my own design and was made with adobe color.
+- General Layout:
+    - The general layout of this app is based on Code Institute's Boutique Ado project. However, much has been changed for this project in terms of layout and aesthetic. Moreover, the aesthetic is my own design and was made with adobe color.
 - Concept:
     - The concept of this app is my own.
 - Content:
