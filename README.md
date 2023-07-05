@@ -289,6 +289,11 @@ Additionally, the current project has one extra model not depicted in the databa
 <hr>
 </details>
 
+<details>
+<summary>404 Page</summary>
+<img src="media/Readme-files/404.png">
+</details>
+
 <br>
 
 ## Features for Site Visitors
