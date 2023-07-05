@@ -2,7 +2,7 @@
 
 ![Am-I-Responsive-Image](media/Readme-files/am-i-responsive.png)
 
-Markscheme is an online e-commerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. The store allows the owners to create two types of products: Workshops and Digital Downloads. Interested users can purchase a ticket to a workshop or purchase a digital download to help them improve their knowledge of topics they plan to take exams for.
+Markscheme is an online e-commerce store that allows teachers and tutors to advertise and sell educational products to children and teenages who are preparing for exams. The store allows the owners to create two types of products: Workshops and Digital Downloads. Interested users can purchase a ticket to a workshop or purchase a digital download to help them improve their knowledge of topics they plan to take exams for. The live link for this site can be found [here](https://markscheme.herokuapp.com/).
 
 <br>
 
