@@ -358,6 +358,9 @@ As this webapp is intended to sell workshop attendance and digital products, all
 <details>
 <summary>Update Billing Details and View Purchase History</summary>
 Users who have signed up for an account have access to their account and can update their billing details and see their previous orders. Additionally, in their order history, they will find all the information they need for attending workshops (i.e., location, date, time, teachers) as well as the download links for any purchased digital files.
+
+<img src="media/Readme-files/normal-user-profile.png">
+
 </details>
 
 
@@ -371,16 +374,29 @@ Site superusers are able to add, edit, and delete both workshops and digital pro
 <br>
 <br>
 If a site user edits a workshop or digital product, they will also be prompted to add a reason for editing the product. This update form allows the site user to indicate whether the update is major (i.e., is an update the customer should know about such as a new version of a handbook or a change of venue for a workshop) or not (i.e., correcting a typo). If the superuser indicates that the update is major, the update details will be posted at the bottom of the product detail page.
+
+<img src="media/Readme-files/products-superuser.png">
+
+<img src="media/Readme-files/edit-workshop.png">
+
+<img src="media/Readme-files/update-reason-form.png">
+
 </details>
 
 <details>
 <summary>Edit Personal Profile Information</summary>
 When site superusers visit their profile page, they will find a different view than when a non-superuser visits their profile page. On the left side of the superuser's profile page is a form that allows the superuser to update their profile/bio information that appears on the staff page.
+
+<img src="media/Readme-files/superuser-profile.png">
+
 </details>
 
 <details>
 <summary>View Attendance List</summary>
 On the right side of the superuser's profile page superusers are able to see a list of workshops which they are teaching as well as the attendance lists for those workshops.
+
+<img src="media/Readme-files/superuser-profile.png">
+
 </details>
 
 <br>
