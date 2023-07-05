@@ -60,12 +60,14 @@ This project makes use of <a href="https://mailchimp.com/?currency=GBP" target="
 
 <br>
 <img src="media/Readme-files/newsletter-signup.png">
-</details>
 <br>
 The second method for the site user to sign up for the newsletter is via the smaller form in the footer. Unlike the first method, this smaller, more abbreviated newsletter form is always present on every single page of the website. This form only requests the user's email address, but otherwise does the same thing as the expanded form outlined above. See the image below.
 
 <br>
 <img src="media/Readme-files/footer-newsletter.png">
+</details>
+
+
 <br>
 <br> 
 </details>
